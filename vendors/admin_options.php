@@ -213,14 +213,7 @@ Redux::setSection( $opt_name, array(
             'title'    => __( 'Preloader Color', 'bloga' ),
             'required' => array( 'xl_enable_preloader', "=", 1 ),
         ),
-        array(
-            'id'       => 'xl_xltheme_credit',
-            'type'     => 'switch',
-            'title'    => __( 'XLTHEME Credit', 'bloga' ),
-            'default'  => 0,
-            'on'       => 'ON',
-            'off'      => 'OFF',
-        ),
+
 
 
         array(
@@ -431,12 +424,77 @@ Redux::setSection( $opt_name, array(
     'desc'  => __( '', 'bloga' ),
     'icon'  => 'el el-magic',
     'fields'     => array(
+// Footer Widget
+        array(
+            'id'       => 'footer_widget',
+            'type'     => 'image_select',
+            'title'    => __('Footer Widget Column', 'bloga'),
+            'subtitle' => __('Select footer widget column. Choose between 1, 2, 3 or 4 column layout.', 'bloga'),
+            'options'  => array(
+                '1c'      => array(
+                    'alt'   => '1 Column',
+                    'img'   => ReduxFramework::$_url.'assets/img/1c.png'
+                ),
+                '2c'      => array(
+                    'alt'   => '2 Column',
+                    'img'   => ReduxFramework::$_url.'assets/img/2c.png'
+                ),
+                '2cl'      => array(
+                    'alt'   => '2 Column Left',
+                    'img'   => ReduxFramework::$_url.'assets/img/2cl.png'
+                ),
+                '2cr'      => array(
+                    'alt'   => '2 Column Right',
+                    'img'  => ReduxFramework::$_url.'assets/img/2cr.png'
+                ),
+                '3c'      => array(
+                    'alt'   => '3 Column',
+                    'img'   => ReduxFramework::$_url.'assets/img/3c.png'
+                ),
+                '3cm'      => array(
+                    'alt'   => '3 Column Middle',
+                    'img'   => ReduxFramework::$_url.'assets/img/3cm.png'
+                ),
+                '3cl'      => array(
+                    'alt'   => '3 Column Left',
+                    'img'   => ReduxFramework::$_url.'assets/img/3cl.png'
+                ),
+                '3cr'      => array(
+                    'alt'  => '3 Column Right',
+                    'img'  => ReduxFramework::$_url.'assets/img/3cr.png'
+                ),
+                '4c'      => array(
+                    'alt'  => '4 Column',
+                    'img'  => ReduxFramework::$_url.'assets/img/4c.png'
+                )
+            ),
+            'default' => '2'
+        ),
+
+// Copyright
+        array(
+            'id'       => 'xl_xltheme_credit',
+            'type'     => 'switch',
+            'title'    => __( 'XLTHEME Credit', 'bloga' ),
+            'default'  => 1,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
+        array(
+            'id'       => 'xl_show_copyright',
+            'type'     => 'switch',
+            'title'    => __( 'Show Copyright', 'bloga' ),
+            'default'  => 1,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
         array(
             'id'       => 'xl_copyright',
             'type'     => 'textarea',
             'title'    => __('Copyright', 'bloga'),
             'subtitle' => __('Add your copyright text', 'bloga'),
-            'default'  => __('Copyright 2015 XLTHEME | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://xltheme.com/">XLTHEME</a>', 'bloga'),
+            'default'  => __('Copyright &copy; 2017 <a href="https://www.xltheme.com/">XLTHEME</a>', 'bloga'),
+            'required' => array('xl_show_copyright', '=', '1')
         ),
 
     ),

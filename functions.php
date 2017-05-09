@@ -117,7 +117,7 @@ add_filter( 'excerpt_length', 'xl_excerpt_length', 999 );
  */
 function bloga_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bloga' ),
+		'name'          => esc_html__( 'Sidebar 1', 'bloga' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -125,16 +125,72 @@ function bloga_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Sidebar 2', 'bloga' ),
+        'id'            => 'sidebar-2',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Top 1', 'bloga' ),
+        'id'            => 'footer-top-1',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Top 2', 'bloga' ),
+        'id'            => 'footer-top-2',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget', 'bloga' ),
-		'id'            => 'footer-widget',
+		'name'          => esc_html__( 'Footer 1', 'bloga' ),
+		'id'            => 'footer-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="col-md-3 col-sm-6 widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 2', 'bloga' ),
+        'id'            => 'footer-2',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 3', 'bloga' ),
+        'id'            => 'footer-3',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 4', 'bloga' ),
+        'id'            => 'footer-4',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
 }
 add_action( 'widgets_init', 'bloga_widgets_init' );
 
