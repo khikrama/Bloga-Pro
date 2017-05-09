@@ -149,6 +149,81 @@ Redux::setSection( $opt_name, array(
     'subsection' => false,
     'fields'     => array(
         array(
+            'id'       => 'xl_theme_style',
+            'type'     => 'select',
+            'title'    => __( 'Default Theme Style', 'bloga' ),
+            'subtitle' => __( 'Select theme style from preset.', 'bloga' ),
+            'options'  => array(
+                'default' => 'Default',
+                'blue' => 'Blue',
+                'green' => 'Green',
+                'orange' => 'Orange',
+            ),
+            'default'  => 'default'
+        ),
+        array(
+            'id'       => 'xl_blog_style',
+            'type'     => 'select',
+            'title'    => __( 'Default Blog Style', 'bloga' ),
+            'subtitle' => __( 'Select blog style from the list.', 'bloga' ),
+            'options'  => array(
+                'list' => 'List',
+//                'grid' => 'Grid',
+            ),
+            'default'  => 'list'
+        ),
+        array(
+            'id'       => 'xl_enable_preloader',
+            'type'     => 'switch',
+            'title'    => __( 'Enable Preloader?', 'bloga' ),
+            'default'  => 0,
+            'on'       => 'ON',
+            'off'      => 'OFF',
+        ),
+        array(
+            'id'       => 'xl_preloader_style',
+            'type'     => 'select',
+            'title'    => __( 'Preloader Style', 'bloga' ),
+            'subtitle' => __( 'Select preloader style from the list.', 'bloga' ),
+            'required' => array( 'xl_enable_preloader', "=", 1 ),
+            'options'  => array(
+                '1' => 'Style 1',
+                '2' => 'Style 2',
+                '3' => 'Style 3',
+                '4' => 'Style 4',
+                '5' => 'Style 5',
+                '6' => 'Style 6',
+                '7' => 'Style 7',
+                '8' => 'Style 8',
+                '9' => 'Style 9',
+                '10' => 'Style 10',
+                '11' => 'Style 11',
+            ),
+            'default'  => '1'
+        ),
+        array(
+            'id'       => 'xl_preloader_bg_color',
+            'type'     => 'color',
+            'title'    => __( 'Preloader Background Color', 'bloga' ),
+            'required' => array( 'xl_enable_preloader', "=", 1 ),
+        ),
+        array(
+            'id'       => 'xl_preloader_color',
+            'type'     => 'color',
+            'title'    => __( 'Preloader Color', 'bloga' ),
+            'required' => array( 'xl_enable_preloader', "=", 1 ),
+        ),
+        array(
+            'id'       => 'xl_xltheme_credit',
+            'type'     => 'switch',
+            'title'    => __( 'XLTHEME Credit', 'bloga' ),
+            'default'  => 0,
+            'on'       => 'ON',
+            'off'      => 'OFF',
+        ),
+
+
+        array(
             'id'       => 'xl_logo_on_off',
             'type'     => 'switch',
             'title'    => __( 'Logo Section', 'bloga' ),
@@ -181,35 +256,20 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Site Width', 'bloga' ),
-    'id'    => 'xl_site_width',
-    'desc'  => __( '', 'bloga' ),
-    'icon'  => 'el el-resize-horizontal',
-    'fields'     => array(
-        array(
-            'id'       => 'opt-select',
-            'type'     => 'select',
-            'title'    => __( 'Select Option', 'bloga' ),
-            'subtitle' => __( 'No validation can be done on this field type', 'bloga' ),
-            'desc'     => __( 'This is the description field, again good for additional info.', 'bloga' ),
-            //Must provide key => value pairs for select options
-            'options'  => array(
-                '1' => 'Opt 1',
-                '2' => 'Opt 2',
-                '3' => 'Opt 3',
-            ),
-            'default'  => '2'
-        ),
-    ),
-) );
-
-Redux::setSection( $opt_name, array(
     'title' => __( 'Header', 'bloga' ),
     'id'    => 'xl_header',
     'desc'  => __( '', 'bloga' ),
     'icon'  => 'el el-website',
     'fields'     => array(
-        
+        array(
+            'id'       => 'sticky_header',
+            'type'     => 'switch',
+            'title'    => __( 'Sticky Header', 'bloga' ),
+            'subtitle' => __( 'If you want to keep your header always on top, Enable this option Yes', 'bloga' ),
+            'default'  => 0,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
     ),
 ) );
 

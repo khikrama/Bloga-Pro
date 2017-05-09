@@ -100,6 +100,16 @@ function bloga_content_width() {
 }
 add_action( 'after_setup_theme', 'bloga_content_width', 0 );
 
+
+/**
+ * Custom Excerpt length
+ */
+function xl_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'xl_excerpt_length', 999 );
+
+
 /**
  * Register widget area.
  *
@@ -132,9 +142,11 @@ add_action( 'widgets_init', 'bloga_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bloga_scripts() {
+    global $xlt_option;
 	wp_enqueue_style( 'bloga-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bloga-plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
 	wp_enqueue_style( 'bloga-main', get_template_directory_uri() . '/assets/css/main.css' );
+	wp_enqueue_style( 'bloga-theme-style', get_template_directory_uri() . '/assets/css/' . $xlt_option['xl_theme_style'] .'.css' );
 	wp_enqueue_style( 'bloga-responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
 
 	wp_enqueue_script( 'bloga-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '1.0
@@ -173,14 +185,28 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/vendors/cmb2/init.php';
 require get_template_directory() . '/vendors/meta_boxes.php';
 
+
 /**
  * Admin Panel
  */
 require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
 require get_template_directory() . '/vendors/admin_options.php';
 
-/** remove redux menu under the tools **/
+/** Remove redux menu under the tools **/
 function remove_redux_menu() {
-	remove_submenu_page('tools.php','redux-about');
+    remove_submenu_page('tools.php','redux-about');
 }
 add_action( 'admin_menu', 'remove_redux_menu',12 );
+
+//Call admin option for function.php
+Redux::init( 'xlt_option' );
+
+//Custom Hook
+function body_begin() {
+    do_action('body_begin');
+}
+
+// Preloader
+if ($xlt_option['xl_enable_preloader']) {
+    include get_template_directory() . '/inc/preloader.php';
+}

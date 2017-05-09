@@ -8,7 +8,7 @@
  *
  * @package Bloga
  */
-
+global $xlt_option;
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -16,17 +16,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="shortcut icon" href="<?php echo $xlt_option['xl_favicon']['url']; ?>" />
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
+<?php body_begin(); ?>
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloga' ); ?></a>
 
 	<!-- Header Section -->
-	<header class="header-area navbar-fixed-top">
+	<header class="header-area <?php echo $xlt_option['sticky_header'] ? 'navbar-fixed-top' : 'no-navbar-fixed'; ?>">
 		<div class="container">
             <div class="menu">
             	<nav class="navbar navbar-default" role="navigation">
@@ -42,7 +45,12 @@
 		                    </button>
 
 							<div class="navbar-brand">
-								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+                                <?php if($xlt_option['xl_logo_on_off']) : ?>
+                                    <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $xlt_option['xl_logo']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+                                <?php else: ?>
+                                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                <?php endif; ?>
 							</div><!--/.navbar-brand-->
 
 	                  	</div><!-- /.navbar-header -->
@@ -68,7 +76,10 @@
             </div><!-- /.menu -->
         </div><!-- /.container -->
 	</header><!-- /.header-area -->
+
+    <?php if ($xlt_option['sticky_header']) : ?>
 	<div class="blank"></div>
+    <?php endif; ?>
 	<!-- End Header Section -->
 
 

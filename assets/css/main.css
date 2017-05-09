@@ -258,9 +258,15 @@ h6 {
 	font-size: inherit;
 	line-height: inherit;
 }
-.navbar-brand .site-title {
+.navbar-brand .site-title,
+.navbar-brand .site-logo {
 	font-size: 2.5em;
 	margin: 26px 0;
+	display: block;
+	line-height: 1;
+}
+.navbar-brand .site-logo {
+	margin: 20px 0;
 }
 .navbar-brand .site-description {
 	margin-top: 10px;
@@ -355,7 +361,8 @@ h6 {
 .menu.padding-0 .sub-menu.sm-nowrap ul {
 	margin-top: -40px !important;
 }
-.navbar-fixed-top {
+.navbar-fixed-top,
+.no-navbar-fixed {
 	box-shadow: 0 0 0px 1px rgba(221, 221, 221, 0.41);
 }
 .logged-in.admin-bar .navbar-fixed-top {
