@@ -424,12 +424,59 @@ Redux::setSection( $opt_name, array(
     'desc'  => __( '', 'bloga' ),
     'icon'  => 'el el-magic',
     'fields'     => array(
+// Footer Top
+        array(
+            'id'       => 'xl_enable_footer_top',
+            'type'     => 'switch',
+            'title'    => __( 'Enable Footer Top', 'bloga' ),
+            'subtitle' => __('If you want to display footer top widget, enable it.', 'bloga'),
+            'default'  => 0,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
+        array(
+            'id'       => 'footer_top',
+            'type'     => 'image_select',
+            'title'    => __('Footer Top Column', 'bloga'),
+            'subtitle' => __('Select footer top widget column. Choose between 1 or 2 column layout.', 'bloga'),
+            'required' => array('xl_enable_footer_top', '=', '1'),
+            'options'  => array(
+                '1c'      => array(
+                    'alt'   => '1 Column',
+                    'img'   => ReduxFramework::$_url.'assets/img/1c.png'
+                ),
+                '2c'      => array(
+                    'alt'   => '2 Column',
+                    'img'   => ReduxFramework::$_url.'assets/img/2c.png'
+                ),
+                '2cl'      => array(
+                    'alt'   => '2 Column Left',
+                    'img'   => ReduxFramework::$_url.'assets/img/2cl.png'
+                ),
+                '2cr'      => array(
+                    'alt'   => '2 Column Right',
+                    'img'  => ReduxFramework::$_url.'assets/img/2cr.png'
+                )
+            ),
+            'default' => '2c'
+        ),
+
 // Footer Widget
+        array(
+            'id'       => 'xl_enable_footer_widget',
+            'type'     => 'switch',
+            'title'    => __( 'Enable Footer Widget', 'bloga' ),
+            'subtitle' => __('If you want to display footer widget, enable it.', 'bloga'),
+            'default'  => 1,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
         array(
             'id'       => 'footer_widget',
             'type'     => 'image_select',
             'title'    => __('Footer Widget Column', 'bloga'),
             'subtitle' => __('Select footer widget column. Choose between 1, 2, 3 or 4 column layout.', 'bloga'),
+            'required' => array('xl_enable_footer_widget', '=', '1'),
             'options'  => array(
                 '1c'      => array(
                     'alt'   => '1 Column',
@@ -468,7 +515,7 @@ Redux::setSection( $opt_name, array(
                     'img'  => ReduxFramework::$_url.'assets/img/4c.png'
                 )
             ),
-            'default' => '2'
+            'default' => '3c'
         ),
 
 // Copyright

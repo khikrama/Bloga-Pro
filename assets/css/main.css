@@ -602,6 +602,9 @@ select:focus,
 .widget-title {
 	margin: 0 0 25px 0;
 }
+.sidebar-widget .widget:last-child {
+	margin-bottom: 0;
+}
 .sidebar-widget .widget li {
 	border-bottom: 1px solid #e3e3e3;
 }

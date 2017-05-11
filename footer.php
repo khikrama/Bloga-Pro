@@ -17,9 +17,15 @@ global $xlt_option;
 </div><!-- #content -->
 
 
+<?php
+if ($xlt_option['xl_enable_footer_top']) :
+    get_sidebar('footer-top');
+endif;
 
-<?php get_sidebar('footer'); ?>
-
+if ($xlt_option['xl_enable_footer_widget']) :
+    get_sidebar('footer');
+endif;
+?>
 
 <?php if (($xlt_option['xl_show_copyright']) || ($xlt_option['xl_xltheme_credit'])) : ?>
 <!-- Footer Section -->
