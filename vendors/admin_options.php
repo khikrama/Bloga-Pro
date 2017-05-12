@@ -312,6 +312,41 @@ Redux::setSection( $opt_name, array(
     'desc'  => __( '', 'bloga' ),
     'icon'  => 'el el-pause',
     'fields'     => array(
+        array(
+            'id'       => 'xl_enable_sidebar',
+            'type'     => 'switch',
+            'title'    => __( 'Enable Sidebar', 'bloga' ),
+            'subtitle' => __('If you want to display sidebar widget, enable it.', 'bloga'),
+            'default'  => 1,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
+        array(
+            'id'       => 'sidebar',
+            'type'     => 'image_select',
+            'title'    => __('Sidebar Position', 'bloga'),
+            'subtitle' => __('Select sidebar position', 'bloga'),
+            'required' => array('xl_enable_sidebar', '=', '1'),
+            'options'  => array(
+                'sl'      => array(
+                    'alt'   => 'Left',
+                    'img'   => ReduxFramework::$_url.'assets/img/2cl.png'
+                ),
+                'sr'      => array(
+                    'alt'   => 'Right',
+                    'img'   => ReduxFramework::$_url.'assets/img/2cr.png'
+                ),
+                'slb'      => array(
+                    'alt'   => 'Both Left',
+                    'img'   => ReduxFramework::$_url.'assets/img/3cl.png'
+                ),
+                'srb'      => array(
+                    'alt'   => 'Both Right',
+                    'img'  => ReduxFramework::$_url.'assets/img/3cr.png'
+                )
+            ),
+            'default' => 'sr'
+        ),
         
     ),
 ) );
