@@ -125,15 +125,6 @@ function bloga_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-    register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar 2', 'bloga' ),
-        'id'            => 'sidebar-2',
-        'description'   => '',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
 
     register_sidebar( array(
         'name'          => esc_html__( 'Footer Top 1', 'bloga' ),

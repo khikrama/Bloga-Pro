@@ -296,15 +296,6 @@ Redux::setSection( $opt_name, array(
     ),
 ) );
 
-Redux::setSection( $opt_name, array(
-    'title' => __( 'Menu', 'bloga' ),
-    'id'    => 'xl_menu',
-    'desc'  => __( '', 'bloga' ),
-    'icon'  => 'el el-lines',
-    'fields'     => array(
-        
-    ),
-) );
 
 Redux::setSection( $opt_name, array(
     'title' => __( 'Sidebars', 'bloga' ),
@@ -322,7 +313,7 @@ Redux::setSection( $opt_name, array(
             'off'      => 'No',
         ),
         array(
-            'id'       => 'sidebar',
+            'id'       => 'sidebar_position',
             'type'     => 'image_select',
             'title'    => __('Sidebar Position', 'bloga'),
             'subtitle' => __('Select sidebar position', 'bloga'),
@@ -335,14 +326,6 @@ Redux::setSection( $opt_name, array(
                 'sr'      => array(
                     'alt'   => 'Right',
                     'img'   => ReduxFramework::$_url.'assets/img/2cr.png'
-                ),
-                'slb'      => array(
-                    'alt'   => 'Both Left',
-                    'img'   => ReduxFramework::$_url.'assets/img/3cl.png'
-                ),
-                'srb'      => array(
-                    'alt'   => 'Both Right',
-                    'img'  => ReduxFramework::$_url.'assets/img/3cr.png'
                 )
             ),
             'default' => 'sr'
@@ -351,15 +334,6 @@ Redux::setSection( $opt_name, array(
     ),
 ) );
 
-Redux::setSection( $opt_name, array(
-    'title' => __( 'Background', 'bloga' ),
-    'id'    => 'xl_background',
-    'desc'  => __( '', 'bloga' ),
-    'icon'  => 'el el-picture',
-    'fields'     => array(
-        
-    ),
-) );
 
 Redux::setSection( $opt_name, array(
     'title' => __( 'Typography', 'bloga' ),
@@ -368,9 +342,18 @@ Redux::setSection( $opt_name, array(
     'icon'  => 'el el-font',
     'fields'     => array(
         array(
-            'id' => 'xl_main_body_fonts',
+            'id'       => 'xl_enable_typography',
+            'type'     => 'switch',
+            'title'    => __( 'Custom Typography', 'bloga' ),
+            'subtitle' => __('Enable custom typography option?.', 'bloga'),
+            'default'  => 0,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
+        array(
+            'id' => 'xl_body_fonts',
             'type' => 'typography',
-            'title' => __('Google Font', 'bloga'),
+            'title' => __('Body Font', 'bloga'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>false,
@@ -389,27 +372,50 @@ Redux::setSection( $opt_name, array(
                 'font-family' => 'Titillium Web',
                 'google'      => true,
             ),
+            'required' => array('xl_enable_typography', '=', '1'),
+        ),
+        array(
+            'id' => 'xl_heading_fonts',
+            'type' => 'typography',
+            'title' => __('Heading Font', 'bloga'),
+            'google'      => true,
+            'color' => false,
+            'word-spacing'=>false,
+            'text-align'=>false,
+            'update-weekly'=>false,
+            'line-height'=>false,
+            'subsets'=>false,
+            'letter-spacing'=>false,
+            'font-style'=>false,
+            'font-backup' => false,
+            'font-size'=>false,
+            'font-weight'=>true,
+            'output'      => array('body'),
+            'units'       =>'px',
+            'default'     => array(
+                'font-family' => 'Titillium Web',
+                'google'      => true,
+            ),
+            'required' => array('xl_enable_typography', '=', '1'),
         ),
     ),
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Styling', 'bloga' ),
-    'id'    => 'xl_styling',
+    'title' => __( 'Custom Style', 'bloga' ),
+    'id'    => 'xl_custom_style',
     'desc'  => __( '', 'bloga' ),
     'icon'  => 'el el-adjust',
     'fields'     => array(
-        
-    ),
-) );
-
-Redux::setSection( $opt_name, array(
-    'title' => __( 'Contact', 'bloga' ),
-    'id'    => 'contact_page_options',
-    'desc'  => __( '', 'bloga' ),
-    'icon'  => 'el el-envelope',
-    'fields'     => array(
-        
+        array(
+            'id'       => 'xl_enable_custom_style',
+            'type'     => 'switch',
+            'title'    => __( 'Custom Typography', 'bloga' ),
+            'subtitle' => __('Enable custom typography option?.', 'bloga'),
+            'default'  => 0,
+            'on'       => 'Yes',
+            'off'      => 'No',
+        ),
     ),
 ) );
 

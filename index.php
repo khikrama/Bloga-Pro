@@ -11,11 +11,19 @@
  *
  * @package Bloga
  */
-
+global $xlt_option;
 get_header(); ?>
 
 <div class="row">
-	<div class="col-md-8">
+    <?php if (($xlt_option['xl_enable_sidebar']) && ($xlt_option['sidebar_position'] == 'sl')) : ?>
+        <div class="col-md-4">
+            <div class="sidebar-widget">
+                <?php get_sidebar(); ?>
+            </div><!--/.sidebar-widget-->
+        </div><!--/.col-md-4-->
+    <?php endif; ?>
+
+	<div class="<?php echo $xlt_option['xl_enable_sidebar'] ? 'col-md-8' : 'col-md-12'; ?>">
 		<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -54,11 +62,13 @@ get_header(); ?>
 	</div><!-- #primary -->
 	</div><!--/.col-md-8-->
 
-	<div class="col-md-4">
-		<div class="sidebar-widget">
-			<?php get_sidebar(); ?>
-		</div><!--/.sidebar-widget-->
-	</div><!--/.col-md-4-->
+    <?php if (($xlt_option['xl_enable_sidebar']) && ($xlt_option['sidebar_position'] == 'sr')) : ?>
+        <div class="col-md-4">
+            <div class="sidebar-widget">
+                <?php get_sidebar(); ?>
+            </div><!--/.sidebar-widget-->
+        </div><!--/.col-md-4-->
+    <?php endif; ?>
 </div><!--/.row-->
 
 <?php get_footer(); ?>
