@@ -33,16 +33,13 @@ Version: 1.0.6
 /**
  * 1.0 Google Font
  */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+/*@import url(//fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);*/
 
 /**
 * 2.0 Global
 */
 html,body {
-	font-family: 'Ubuntu', sans-serif;
 	color: #5c6c82;
-	font-size: 14px;
-	font-weight: 400;
 }
 a {
 	color: #2b3747;
@@ -167,7 +164,7 @@ h6 {
 }
 .blank {
 	display: block;
-	height: 99px;
+	height: 90px;
 }
 .section-padding {
 	padding: 80px 0;
@@ -638,9 +635,9 @@ input.form-control {
 }
 .blog-search-button {
 	position: absolute;
-	right: 0px;
-	top: 0px;
-	padding: 10px 15px;
+	right: 0;
+	top: 0;
+	padding: 14px 15px;
 	background: transparent;
 	border: none;
 }

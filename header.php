@@ -84,6 +84,7 @@ global $xlt_option;
 
 
 	<div id="content" class="site-content">
+
 		<!-- Blog Section -->
 		<section id="blog-page" class="page blog-page">
 			<div class="section-padding">
