@@ -259,5 +259,5 @@ if ($xlt_option['xl_enable_preloader']) {
 }
 
 // Custom Style
-//include get_template_directory() . '/inc/custom-style.php';
+include get_template_directory() . '/inc/custom-style.php';
 

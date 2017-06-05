@@ -263,6 +263,26 @@ Redux::setSection( $opt_name, array(
             'on'       => 'Yes',
             'off'      => 'No',
         ),
+
+        array(
+            'id'       => 'header_style',
+            'type'     => 'image_select',
+            'title'    => __( 'Header Style', 'bloga' ),
+            'subtitle' => __( 'Select a header variation from presets', 'bloga' ),
+            //Must provide key => value(array:title|img) pairs for radio options
+            'options'  => array(
+                '1' => array(
+                    'alt' => 'Default',
+                    'img' => get_template_directory_uri() . '/assets/images/headers/default.png'
+                ),
+                '2' => array(
+                    'alt' => 'Header 1',
+                    'img' => get_template_directory_uri() . '/assets/images/headers/header1.png'
+                ),
+            ),
+            'default'  => '2'
+        ),
+
     ),
 ) );
 
@@ -390,6 +410,127 @@ Redux::setSection( $opt_name, array(
             'off'      => 'No',
         ),
         array(
+            'id'       => 'color-section-start',
+            'type'     => 'section',
+            'title'    => __( 'Color Options', 'bloga' ),
+            'subtitle' => __( 'Change text color from the following section.', 'bloga' ),
+            'indent'   => true,
+            'required' => array('xl_enable_custom_style', '=', '1'),
+        ),
+        array(
+            'id'       => 'default-color',
+            'type'     => 'color',
+            'output'   => array( 'a' ),
+            'title'    => __( 'Default Color', 'bloga' ),
+            'subtitle' => __( 'Pick default link color (default: #2b3747).', 'bloga' ),
+            'default'  => '#2b3747',
+        ),
+        array(
+            'id'       => 'default-hover-color',
+            'type'     => 'color',
+            'output'   => array( 'a:hover' ),
+            'title'    => __( 'Default Hover Color', 'bloga' ),
+            'subtitle' => __( 'Pick default link hover color (default: #ef6767).', 'bloga' ),
+            'default'  => '#ef6767',
+        ),
+        array(
+            'id'       => 'menu-color',
+            'type'     => 'color',
+            'output'   => array( '.navbar-default .navbar-nav>li>a' ),
+            'title'    => __( 'Menu Color', 'bloga' ),
+            'subtitle' => __( 'Pick the menu color (default: #2b3747).', 'bloga' ),
+            'default'  => '#2b3747',
+        ),
+        array(
+            'id'       => 'menu-hover-color',
+            'type'     => 'color',
+            'output'   => array( '.navbar-default .navbar-nav>li>a:hover', '.navbar-default .navbar-nav>li>a:focus' ),
+            'title'    => __( 'Menu Hover Color', 'bloga' ),
+            'subtitle' => __( 'Pick the menu hover color (default: #ef6767).', 'bloga' ),
+            'default'  => '#ef6767',
+        ),
+        array(
+            'id'       => 'menu-active-color',
+            'type'     => 'color',
+            'output'   => array( '.navbar-default .navbar-nav>li.current-menu-item a' ),
+            'title'    => __( 'Menu Active Color', 'bloga' ),
+            'subtitle' => __( 'Pick the menu active color (default: #ef6767).', 'bloga' ),
+            'default'  => '#ef6767',
+        ),
+        array(
+            'id'       => 'body-color',
+            'type'     => 'color',
+            'output'   => array( 'html','body' ),
+            'title'    => __( 'Body Color', 'bloga' ),
+            'subtitle' => __( 'Pick default body color (default: #5c6c82).', 'bloga' ),
+            'default'  => '#5c6c82',
+        ),
+        array(
+            'id'       => 'footer-top-widget-color',
+            'type'     => 'color',
+            'output'   => array( '.footer-top-widget' ),
+            'title'    => __( 'Footer Top Widget Color', 'bloga' ),
+            'subtitle' => __( 'Pick default footer top widget color (default: #5c6c82).', 'bloga' ),
+            'default'  => '#5c6c82',
+        ),
+        array(
+            'id'       => 'footer-widget-color',
+            'type'     => 'color',
+            'output'   => array( '.footer-widget' ),
+            'title'    => __( 'Footer Widget Color', 'bloga' ),
+            'subtitle' => __( 'Pick default footer widget color (default: #5c6c82).', 'bloga' ),
+            'default'  => '#5c6c82',
+        ),
+        array(
+            'id'       => 'footer-color',
+            'type'     => 'color',
+            'output'   => array( '.footer-area' ),
+            'title'    => __( 'Footer Color', 'bloga' ),
+            'subtitle' => __( 'Pick default footer color (default: #5c6c82).', 'bloga' ),
+            'default'  => '#5c6c82',
+        ),
+        array(
+            'id'       => 'header-border-top-color',
+            'type'     => 'color_rgba',
+            'title'    => __( 'Header Border Top Color', 'bloga' ),
+            'subtitle' => __( 'Pick the header border top color (default: rgba(221, 221, 221, 0.41)).', 'bloga' ),
+            'default'  => array(
+                'color' => '#ddd',
+                'alpha' => '.41',
+                'rgba' => 'rgba(221, 221, 221, 0.41)'
+            ),
+        ),
+        array(
+            'id'       => 'header-border-bottom-color',
+            'type'     => 'color_rgba',
+            'title'    => __( 'Header Border Bottom Color', 'bloga' ),
+            'subtitle' => __( 'Pick the header border bottom color (default: rgba(221, 221, 221, 0.41)).', 'bloga' ),
+            'default'  => array(
+                'color' => '#ddd',
+                'alpha' => '.41',
+                'rgba' => 'rgba(221, 221, 221, 0.41)'
+            ),
+        ),
+
+
+        array(
+            'id'       => 'bg-section-start',
+            'type'     => 'section',
+            'title'    => __( 'Background Options', 'bloga' ),
+            'subtitle' => __( 'Change background color, images from the following section.', 'bloga' ),
+            'indent'   => true,
+            'required' => array('xl_enable_custom_style', '=', '1'),
+        ),
+        array(
+            'id'       => 'header_top_area_bg',
+            'type'     => 'background',
+            'output'   => array( '.header-top' ),
+            'title'    => __( 'Header Top Background', 'bloga' ),
+            'subtitle' => __( 'Pick a header top background color for the theme (default: #ffffff).', 'bloga' ),
+            'default'  => '#ffffff',
+            'required' => array('xl_enable_custom_style', '=', '1'),
+        ),
+        array(
             'id'       => 'header_area_bg',
             'type'     => 'background',
             'output'   => array( '.header-area' ),
@@ -472,7 +613,34 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('Google plus button link', 'bloga'),
             'validate' => 'url',
         ),
-
+        array(
+            'id'       => 'xl_dribbble',
+            'type'     => 'text',
+            'title'    => __('Dribbble', 'bloga'),
+            'subtitle' => __('Dribbble button link', 'bloga'),
+            'validate' => 'url',
+        ),
+        array(
+            'id'       => 'xl_pinterest',
+            'type'     => 'text',
+            'title'    => __('Pinterest', 'bloga'),
+            'subtitle' => __('Pinterest button link', 'bloga'),
+            'validate' => 'url',
+        ),
+        array(
+            'id'       => 'xl_behance',
+            'type'     => 'text',
+            'title'    => __('Behance', 'bloga'),
+            'subtitle' => __('Behance button link', 'bloga'),
+            'validate' => 'url',
+        ),
+        array(
+            'id'       => 'xl_youtube',
+            'type'     => 'text',
+            'title'    => __('YouTube', 'bloga'),
+            'subtitle' => __('YouTube button link', 'bloga'),
+            'validate' => 'url',
+        ),
     ),
 ) );
 

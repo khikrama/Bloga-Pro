@@ -18,7 +18,55 @@ global $xlt_option;
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="shortcut icon" href="<?php echo $xlt_option['xl_favicon']['url']; ?>" />
 
+<?php if (!empty($xlt_option['custom_css'])) : ?>
+    <style type="text/css">
+        <?php echo $xlt_option['custom_css']; ?>
+    </style>
+<?php endif; ?>
+
+<?php if (!empty($xlt_option['xl_tracking_code'])) : ?>
+    <?php echo $xlt_option['xl_tracking_code']; ?>
+<?php endif; ?>
+
 <?php wp_head(); ?>
+
+<?php if (!empty($xlt_option['xl_space_before_head'])) : ?>
+    <?php echo $xlt_option['xl_space_before_head']; ?>
+<?php endif; ?>
+
+
+
+    <!--Sricky Nav-->
+    <?php if ($xlt_option['sticky_header']) : ?>
+        <script type="text/javascript">
+            (function($) {
+
+                $( document ).ready(function() {
+
+                    var heightTop = $('.header-top').innerHeight();
+                    var heightHeader = $('.header-area').innerHeight();
+//                    var totalHeight = heightTop + heightHeader;
+                    var totalHeight = heightTop;
+                console.log(heightTop);
+                console.log(heightHeader);
+                console.log(totalHeight);
+
+                    //top menu
+                    $(window).bind('scroll', function () {
+                        if ($(window).scrollTop() > totalHeight) {
+                            $('.header-area').addClass('navbar-fixed-top');
+                        } else {
+                            $('.header-area').removeClass('navbar-fixed-top');
+                        }
+                    });
+
+                });
+            })(jQuery);
+        </script>
+    <?php endif; ?>
+
+
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,54 +76,21 @@ global $xlt_option;
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloga' ); ?></a>
 
-	<!-- Header Section -->
-	<header class="header-area <?php echo $xlt_option['sticky_header'] ? 'navbar-fixed-top' : 'no-navbar-fixed'; ?>">
-		<div class="container">
-            <div class="menu">
-            	<nav class="navbar navbar-default" role="navigation">
-	                <div class="container-fluid">
-	                	<!-- Brand and toggle get grouped for better mobile display -->
-	                  	<div class="navbar-header">
+    <?php
 
-		                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
-			                    <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'bloga' ); ?></span>
-			                    <span class="icon-bar"></span>
-			                    <span class="icon-bar"></span>
-			                    <span class="icon-bar"></span>
-		                    </button>
+        $header_style = $xlt_option['header_style'];
 
-							<div class="navbar-brand">
-
-                                <?php if($xlt_option['xl_logo_on_off']) : ?>
-                                    <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $xlt_option['xl_logo']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
-                                <?php else: ?>
-                                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                                <?php endif; ?>
-							</div><!--/.navbar-brand-->
-
-	                  	</div><!-- /.navbar-header -->
-
-	                  	<!-- Collect the nav links, forms, and other content for toggling -->
-	                  	<div class="collapse navbar-collapse" id="menu-collapse">
-			
-							<?php 
-								wp_nav_menu( 
-									array( 
-										'theme_location' => 'primary', 
-										'container' 	 => '',
-										'items_wrap' 	 => '<ul class="nav navbar-nav navbar-right sm sm-blue main-menu">%3$s</ul>',
-										'depth'      	 => 3,
-										'fallback_cb'     => 'bloga_default_menu',
-									)
-								);
-							?>		
-
-		                </div><!-- /.navbar-collapse -->
-	                </div><!-- /.container-fluid -->
-            	</nav><!-- /.navbar -->
-            </div><!-- /.menu -->
-        </div><!-- /.container -->
-	</header><!-- /.header-area -->
+        switch ($header_style) {
+            case 1 :
+                include ('template-parts/headers/header-default.php');
+                break;
+            case 2 :
+                include ('template-parts/headers/header1.php');
+                break;
+            default :
+                include ('template-parts/headers/header-default.php');
+        }
+    ?>
 
     <?php if ($xlt_option['sticky_header']) : ?>
 	<div class="blank"></div>

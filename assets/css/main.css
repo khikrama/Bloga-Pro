@@ -238,6 +238,8 @@ h6 {
 */
 .header-area {
 	background: #ffffff;
+	border-top: 1px solid rgba(221, 221, 221, 0.41);
+	border-bottom: 1px solid rgba(221, 221, 221, 0.41);
 }
 .navbar-default {
 	background-color: transparent;
@@ -287,7 +289,8 @@ h6 {
 	border-color: transparent;
 }
 .navbar-default .navbar-nav>li>a:hover, 
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li.current-menu-item a {
 	color: #ef6767;
 }
 .navbar-default .navbar-toggle:hover, 
@@ -360,10 +363,46 @@ h6 {
 }
 .navbar-fixed-top,
 .no-navbar-fixed {
-	box-shadow: 0 0 0px 1px rgba(221, 221, 221, 0.41);
+	/*box-shadow: 0 0 0px 1px rgba(221, 221, 221, 0.41);*/
 }
 .logged-in.admin-bar .navbar-fixed-top {
 	top: inherit;
+}
+
+/**
+* Header Top
+ */
+.header-top {
+	padding: 10px 0;
+}
+
+/**
+* Top Contact
+ */
+.contact span:not(:last-child) {
+	margin-right: 15px;
+}
+.contact span i {
+	margin-right: 5px;
+}
+
+/**
+* Social
+ */
+.social {}
+.social ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.social ul li {
+	display: inline-block;
+}
+.social ul li:not(:last-child) {
+	margin-right: 5px;
+}
+.social ul li a {
+	display: block;
 }
 
 /**

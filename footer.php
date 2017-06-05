@@ -57,7 +57,16 @@ endif;
 
 </div><!-- #page -->
 
+<?php if (!empty($xlt_option['custom_js'])) : ?>
+<script type="text/javascript">
+    <?php echo $xlt_option['custom_js']; ?>
+</script>
+<?php endif; ?>
+
 <?php wp_footer(); ?>
 
+<?php if (!empty($xlt_option['xl_space_before_body'])) : ?>
+    <?php echo $xlt_option['xl_space_before_body']; ?>
+<?php endif; ?>
 </body>
 </html>
