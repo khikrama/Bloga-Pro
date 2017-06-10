@@ -150,30 +150,90 @@ Redux::setSection( $opt_name, array(
     'fields'     => array(
         array(
             'id'       => 'xl_theme_style',
-            'type'     => 'select',
+            'type'     => 'image_select',
             'title'    => __( 'Default Theme Style', 'bloga' ),
             'subtitle' => __( 'Select theme style from preset.', 'bloga' ),
             'options'  => array(
-                'default' => 'Default',
-                'red' => 'Red',
-                'pink' => 'Pink',
-                'purple' => 'Purple',
-                'deep-purple' => 'Deep Purple',
-                'indigo' => 'Indigo',
-                'blue' => 'Blue',
-                'light-blue' => 'Light Blue',
-                'cyan' => 'Cyan',
-                'teal' => 'Teal',
-                'green' => 'Green',
-                'light-green' => 'Light Green',
-                'lime' => 'Lime',
-                'yellow' => 'Yellow',
-                'amber' => 'Amber',
-                'orange' => 'Orange',
-                'deep-orange' => 'Deep Orange',
-                'brown' => 'Brown',
-                'grey' => 'Grey',
-                'blue-grey' => 'Blue Grey',
+                'default' => array(
+                    'alt' => 'Default',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/default.png'
+                ),
+                'red' => array(
+                    'alt' => 'Red',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/red.png'
+                ),
+                'pink' => array(
+                    'alt' => 'Pink',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/pink.png'
+                ),
+                'purple' => array(
+                    'alt' => 'Purple',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/purple.png'
+                ),
+                'deep-purple' => array(
+                    'alt' => 'Deep Purple',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/deep-purple.png'
+                ),
+                'indigo' => array(
+                    'alt' => 'Indigo',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/indigo.png'
+                ),
+                'blue' => array(
+                    'alt' => 'Blue',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/blue.png'
+                ),
+                'light-blue' => array(
+                    'alt' => 'Light Blue',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/light-blue.png'
+                ),
+                'cyan' => array(
+                    'alt' => 'Cyan',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/cyan.png'
+                ),
+                'teal' => array(
+                    'alt' => 'Teal',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/teal.png'
+                ),
+                'green' => array(
+                    'alt' => 'Green',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/green.png'
+                ),
+                'light-green' => array(
+                    'alt' => 'Light Green',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/light-green.png'
+                ),
+                'lime' => array(
+                    'alt' => 'Lime',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/lime.png'
+                ),
+                'yellow' => array(
+                    'alt' => 'Yellow',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/yellow.png'
+                ),
+                'amber' => array(
+                    'alt' => 'Amber',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/amber.png'
+                ),
+                'orange' => array(
+                    'alt' => 'Orange',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/orange.png'
+                ),
+                'deep-orange' => array(
+                    'alt' => 'Deep Orange',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/deep-orange.png'
+                ),
+                'brown' => array(
+                    'alt' => 'Brown',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/brown.png'
+                ),
+                'grey' => array(
+                    'alt' => 'Grey',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/grey.png'
+                ),
+                'blue-grey' => array(
+                    'alt' => 'Blue Grey',
+                    'img' => get_template_directory_uri() . '/assets/images/color-presets/blue-grey.png'
+                ),
             ),
             'default'  => 'default'
         ),
@@ -229,9 +289,15 @@ Redux::setSection( $opt_name, array(
             'title'    => __( 'Preloader Color', 'bloga' ),
             'required' => array( 'xl_enable_preloader', "=", 1 ),
         ),
+    ),
+) );
 
-
-
+Redux::setSection( $opt_name, array(
+    'title' => __( 'Logo & Favicon', 'bloga' ),
+    'id'    => 'xl_logo_favicon',
+    'desc'  => __( '', 'bloga' ),
+    'icon'  => 'el el-leaf',
+    'fields'     => array(
         array(
             'id'       => 'xl_logo_on_off',
             'type'     => 'switch',
@@ -241,7 +307,6 @@ Redux::setSection( $opt_name, array(
             'on'       => 'ON',
             'off'      => 'OFF',
         ),
-        
         array(
             'id'       => 'xl_logo',
             'type'     => 'media',
@@ -252,7 +317,6 @@ Redux::setSection( $opt_name, array(
             'title'    => __( 'Upload Logo', 'bloga' ),
             'subtitle'     => __( 'Select an image file for your logo.', 'bloga' ),
         ),
-
         array(
             'id' => 'xl_favicon',
             'type' => 'media',
@@ -302,7 +366,6 @@ Redux::setSection( $opt_name, array(
     ),
 ) );
 
-
 Redux::setSection( $opt_name, array(
     'title' => __( 'Sidebars', 'bloga' ),
     'id'    => 'xl_sidebars',
@@ -339,7 +402,6 @@ Redux::setSection( $opt_name, array(
         
     ),
 ) );
-
 
 Redux::setSection( $opt_name, array(
     'title' => __( 'Typography', 'bloga' ),
@@ -566,7 +628,6 @@ Redux::setSection( $opt_name, array(
         ),
     ),
 ) );
-
 
 Redux::setSection( $opt_name, array(
     'title' => __( 'Blog', 'bloga' ),
@@ -863,7 +924,6 @@ Redux::setSection( $opt_name, array(
     ),
 ) );
 
-
 Redux::setSection( $opt_name, array(
     'title' => __( 'Footer Settings', 'bloga' ),
     'id'    => 'footer_options',
@@ -992,7 +1052,6 @@ Redux::setSection( $opt_name, array(
 
     ),
 ) );
-
 
 Redux::setSection( $opt_name, array(
     'title' => __( 'Custom Code', 'bloga' ),

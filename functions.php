@@ -201,7 +201,7 @@ function bloga_scripts() {
 	wp_enqueue_style( 'bloga-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bloga-plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
 	wp_enqueue_style( 'bloga-main', get_template_directory_uri() . '/assets/css/main.css' );
-	wp_enqueue_style( 'bloga-theme-style', get_template_directory_uri() . '/assets/css/' . $xlt_option['xl_theme_style'] .'.css' );
+	wp_enqueue_style( 'bloga-theme-style', get_template_directory_uri() . '/assets/css/color-presets/' . $xlt_option['xl_theme_style'] .'.css' );
 	wp_enqueue_style( 'bloga-responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
 
 	wp_enqueue_script( 'bloga-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '1.0
