@@ -47,9 +47,9 @@ global $xlt_option;
                     var heightHeader = $('.header-area').innerHeight();
 //                    var totalHeight = heightTop + heightHeader;
                     var totalHeight = heightTop;
-                console.log(heightTop);
-                console.log(heightHeader);
-                console.log(totalHeight);
+//                console.log(heightTop);
+//                console.log(heightHeader);
+//                console.log(totalHeight);
 
                     //top menu
                     $(window).bind('scroll', function () {
@@ -93,7 +93,7 @@ global $xlt_option;
     ?>
 
     <?php if ($xlt_option['sticky_header']) : ?>
-	<div class="blank"></div>
+<!--	<div class="blank"></div>-->
     <?php endif; ?>
 	<!-- End Header Section -->
 

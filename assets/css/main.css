@@ -40,6 +40,8 @@ Version: 1.0.6
 */
 html,body {
 	color: #5c6c82;
+	font-size: 16px;
+	line-height: 25px;
 }
 a {
 	color: #2b3747;
@@ -59,7 +61,7 @@ a:focus {
 	outline-offset:0;
 }
 p {
-	line-height: 25px;
+	/*line-height: 25px;*/
 	margin-bottom: 20px;
 }
 article tr,
@@ -324,6 +326,19 @@ h6 {
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
+.sm-blue ul {
+	background:#ef6767;
+}
+.sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
+	color:#ef6767;
+	border-left: 2px solid #ef6767;
+}
+.sm-blue ul a.highlighted {
+	background:#ef6767;
+}
+.sm-blue ul a:hover {
+	color: #ef6767 !important;
+}
 .sub-menu li a {
 	font-size: 0.937em;
 }
@@ -331,7 +346,7 @@ h6 {
 	min-width: 200px !important;
 	margin-top: 2px !important;
 	left: 50px !important;
-	border-top: 2px solid #BA4646;
+	border-top: 2px solid #d32f2f;
 }
 .sub-menu.sm-nowrap ul {
 	margin-top: -40px !important;
@@ -366,7 +381,7 @@ h6 {
 	/*box-shadow: 0 0 0px 1px rgba(221, 221, 221, 0.41);*/
 }
 .logged-in.admin-bar .navbar-fixed-top {
-	top: inherit;
+	/*top: inherit;*/
 }
 
 /**
@@ -374,6 +389,7 @@ h6 {
  */
 .header-top {
 	padding: 10px 0;
+	font-size: .8em;
 }
 
 /**
@@ -641,7 +657,8 @@ select:focus,
 .sidebar-widget .widget:last-child {
 	margin-bottom: 0;
 }
-.sidebar-widget .widget li {
+.sidebar-widget .widget li,
+.footer-top-widget .widget li {
 	border-bottom: 1px solid #e3e3e3;
 }
 .sidebar-widget .widget li:last-child {
@@ -679,6 +696,7 @@ input.form-control {
 	padding: 14px 15px;
 	background: transparent;
 	border: none;
+	line-height: 1;
 }
 
 /**
@@ -742,8 +760,8 @@ td#prev, td#next {
 }
 .widget li {
 	border-bottom: 1px solid #414f62;
-	margin: 15px 0;
-	padding-bottom: 15px;
+	padding: 15px 0;
+	line-height: 1;
 }
 .widget li:last-child {
 	border-bottom: 0;

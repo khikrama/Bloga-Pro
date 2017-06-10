@@ -38,13 +38,18 @@ $xl_blog_style = $xlt_option['xl_blog_style'] ? $xlt_option['xl_blog_style'] : '
         </header><!-- .entry-header -->
 
         <div class="entry-content">
-            <?php the_excerpt(); ?>
 
             <?php
-            wp_link_pages( array(
-                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bloga' ),
-                'after'  => '</div>',
-            ) );
+                if ($xlt_option['xl_enable_limit_post']) {
+                    the_excerpt();
+                } else {
+                    the_content();
+                }
+
+                wp_link_pages( array(
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bloga' ),
+                    'after'  => '</div>',
+                ) );
             ?>
         </div><!-- .entry-content -->
     </div>

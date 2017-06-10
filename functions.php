@@ -105,9 +105,17 @@ add_action( 'after_setup_theme', 'bloga_content_width', 0 );
  * Custom Excerpt length
  */
 function xl_excerpt_length( $length ) {
-    return 15;
+    global $xlt_option;
+    return $xlt_option['xl_excerpt_length'] ? $xlt_option['xl_excerpt_length'] : 25;
 }
 add_filter( 'excerpt_length', 'xl_excerpt_length', 999 );
+
+
+function xl_excerpt_more( $more ) {
+    global $xlt_option;
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . $xlt_option['xl_blog_read_more_text'] . '</a>';
+}
+add_filter( 'excerpt_more', 'xl_excerpt_more' );
 
 
 /**

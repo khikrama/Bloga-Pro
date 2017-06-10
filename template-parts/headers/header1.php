@@ -4,16 +4,18 @@ global $xlt_option;
 <!--Header Top -->
 <div class="header-top">
     <div class="container">
-        <div class="col-md-6">
-            <div class="contact">
-                <span>Have any question? </span>
-                <span class="phone"><i class="fa fa-phone"></i>+1 1578 8554</span>
-                <span class="email"><i class="fa fa-envelope-o"></i>info@yourdomain.com</span>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact">
+                    <span>Have any question? </span>
+                    <span class="phone"><i class="fa fa-phone"></i>+1 1578 8554</span>
+                    <span class="email"><i class="fa fa-envelope-o"></i>info@yourdomain.com</span>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="text-right">
-                <?php include ('header-parts/social.php'); ?>
+            <div class="col-md-6">
+                <div class="text-right">
+                    <?php include ('header-parts/social.php'); ?>
+                </div>
             </div>
         </div>
     </div>
