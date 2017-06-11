@@ -43,6 +43,9 @@
     .collapse.in{
         display:block !important;
     }
+    .sm-blue ul {
+        background: transparent;
+    }
 
     .navbar-default .navbar-nav>li>a:after {
         content: "";
@@ -58,6 +61,10 @@
         overflow-y: auto!important;
         border: 0;
         max-height: 340px;
+    }
+    
+    .header-top .contact {
+        text-align: center;
     }
 
 
@@ -209,6 +216,14 @@
         bottom: 120px;
         right: 1px;
     }*/
+
+    .header-top {
+        display: none;
+    }
+    .navbar-brand .site-title,
+    .navbar-brand .site-logo {
+        font-size: 1.5em;
+    }
 
 
 
