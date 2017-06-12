@@ -235,13 +235,6 @@ function bloga_default_menu(){
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Metabox
- */
-require get_template_directory() . '/vendors/cmb2/init.php';
-require get_template_directory() . '/vendors/meta_boxes.php';
-
-
-/**
  * Admin Panel
  */
 require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
