@@ -235,6 +235,12 @@ function bloga_default_menu(){
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * TGM Plugin Activation
+ */
+require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/plugin-activation.php';
+
+/**
  * Admin Panel
  */
 require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
@@ -261,4 +267,3 @@ if ($xlt_option['xl_enable_preloader']) {
 
 // Custom Style
 include get_template_directory() . '/inc/custom-style.php';
-
