@@ -255,6 +255,7 @@ add_action( 'admin_menu', 'remove_redux_menu',12 );
 //Call admin option for function.php
 Redux::init( 'xlt_option' );
 
+
 //Custom Hook
 function body_begin() {
     do_action('body_begin');

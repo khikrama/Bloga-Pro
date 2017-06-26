@@ -58,11 +58,6 @@ function bloga_register_required_plugins() {
 	 */
 	$plugins = array(
         array(
-            'name'     => esc_html__('CMB2', 'bloga'),
-            'slug'     => 'cmb2',
-            'required' => true
-        ),
-        array(
             'name'     => esc_html__('Contact Form 7', 'bloga'),
             'slug'     => 'contact-form-7',
             'required' => false
