@@ -12,7 +12,7 @@ global $xlt_option;
                     <span class="email"><i class="fa fa-envelope-o"></i>info@yourdomain.com</span>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 hidden-sm">
                 <div class="text-right">
                     <?php include ('header-parts/social.php'); ?>
                 </div>

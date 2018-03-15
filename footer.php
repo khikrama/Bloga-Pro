@@ -11,7 +11,7 @@
 global $xlt_option;
 ?>
 
-			</div><!--/.container-->
+			
 		</div><!--/.section-padding-->
 	</section><!--/.page-->
 </div><!-- #content -->

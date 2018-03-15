@@ -88,6 +88,12 @@ function bloga_register_required_plugins() {
             'name'     => esc_html__('Contact Form 7', 'bloga'),
             'slug'     => 'contact-form-7',
             'required' => false
+		),
+		// MailChimp for WordPress
+        array(
+            'name'     => esc_html__('MailChimp for WordPress', 'bloga'),
+            'slug'     => 'mailchimp-for-wp',
+            'required' => false
         ),
 
 	);

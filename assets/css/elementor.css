@@ -1,0 +1,121 @@
+/**
+* Slider
+*/
+.elementor-widget-xl-slider .carousel-inner {
+    margin: 45px 30px;
+}
+.elementor-widget-xl-slider .arrows .left,
+.elementor-widget-xl-slider .arrows .right {
+    position: absolute;
+    top: 45%;
+}
+.elementor-widget-xl-slider .arrows .left {
+    left: -15px;
+}
+.elementor-widget-xl-slider .arrows .right {
+    right: -15px;
+}
+.elementor-widget-xl-slider .carousel-indicators {
+    left: 30px;
+    bottom: -40px;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+/**
+* Blog
+*/
+.xl-custom-blog .entry-meta > div {
+    display: inline-block;
+}
+.xl-custom-blog .entry-meta>div i {
+    margin-right: 5px;
+}
+.xl-custom-blog .entry-meta>div:not(:last-child) {
+    margin-right: 15px;
+}
+.xl-custom-blog .entry-meta .category .post-categories {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+.xl-custom-blog .entry-footer .elementor-button {
+    background: transparent;
+    color: #2b3747;
+}
+
+/**
+* Event
+*/
+.xl-event-wraper .xl-event .entry-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+.xl-event-wraper .xl-event .event-info > div:not(:last-child) {
+    margin-bottom: 8px;
+}
+.xl-event-wraper .xl-event .event-info > div i {
+    color: #a0d1d5;
+    width: 20px;
+}
+.xl-event-wraper .xl-event .event-details-btn {
+    margin-top: 20px;
+}
+.xl-event-wraper .xl-event .thumb-date {
+    position: relative;
+}
+.xl-event-wraper .xl-event .thumb-date .edate-time {
+    position: absolute;
+    top: -41px;
+    background: #fff;
+    padding: 5px;
+    text-align: center;
+    left: 50%;
+    width: 80px;
+    margin-left: -40px;
+}
+.xl-event-wraper .xl-event .thumb-date .edate-time .date {
+    text-transform: uppercase;
+}
+.xl-event-wraper .xl-event .thumb-date .edate-time .day {
+    font-weight: 700;
+    font-size: 25px;
+}
+.xl-event-wraper .xl-event .thumb-date .edate-time .time {
+    border-top: 1px solid #ddd;
+}
+.xl-event-wraper .xl-event {
+    margin-bottom: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+}
+
+
+/**
+* Partner
+*/
+.xl-partner .title-sub-title {
+    border-top: 1px solid #c8c8c8;
+    border-bottom: 1px solid #c8c8c8;
+}
+.xl-partner .title-sub-title .title {
+    margin: 5px 0;
+}
+.xl-partner .title-sub-title .sub-title {
+    margin-bottom: 5px;
+}
+.xl-partner .partner-img {
+    margin: 20px 0;
+}
+.xl-partner .partner-description p:last-child {
+    /* margin-bottom: 0; */
+}
+
+/**
+* Element Sidebar Featured Post
+*/
+
+.xl-blog-featured-posts .custom-post:not(:last-child) {
+    /* margin-bottom: 30px; */
+}

@@ -50,5 +50,17 @@ global $xlt_option;
                 <a href="<?php echo $xlt_option['xl_youtube']; ?>" target="_blank"><i class="fa fa-youtube fa-fw"></i></a>
             </li>
         <?php endif; ?>
+
+        <?php if($xlt_option['xl_instagram']) : ?>
+            <li>
+                <a href="<?php echo $xlt_option['xl_instagram']; ?>" target="_blank"><i class="fa fa-instagram fa-fw"></i></a>
+            </li>
+        <?php endif; ?>
+
+        <?php if($xlt_option['xl_flickr']) : ?>
+            <li>
+                <a href="<?php echo $xlt_option['xl_flickr']; ?>" target="_blank"><i class="fa fa-flickr fa-fw"></i></a>
+            </li>
+        <?php endif; ?>
     </ul>
 </div>

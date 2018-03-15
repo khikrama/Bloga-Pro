@@ -8,6 +8,12 @@ var jq = jQuery.noConflict();
 		//fitVids
 		jq(".container").fitVids();
 
+		// Mixitup		
+		if(jq('.portfolio-filter').length){
+            var containerEl = document.querySelector('.mixitup-container');
+			var mixer = mixitup(containerEl);
+        }
+
 	});
 })(jq);
 

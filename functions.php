@@ -198,11 +198,15 @@ add_action( 'widgets_init', 'bloga_widgets_init' );
  */
 function bloga_scripts() {
     global $xlt_option;
-	wp_enqueue_style( 'bloga-style', get_stylesheet_uri() );
+	
 	wp_enqueue_style( 'bloga-plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
+	
 	wp_enqueue_style( 'bloga-main', get_template_directory_uri() . '/assets/css/main.css' );
 	wp_enqueue_style( 'bloga-theme-style', get_template_directory_uri() . '/assets/css/color-presets/' . $xlt_option['xl_theme_style'] .'.css' );
+	wp_enqueue_style( 'bloga-elementor', get_template_directory_uri() . '/assets/css/elementor.css' );
 	wp_enqueue_style( 'bloga-responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
+
+	wp_enqueue_style('bloga-style', get_stylesheet_uri());
 
 	wp_enqueue_script( 'bloga-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '1.0
 	.0', true );
@@ -241,12 +245,19 @@ require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/plugin-activation.php';
 
 /**
+ * CMB2
+ */
+// require get_template_directory() . '/vendors/cmb2/init.php';
+// require get_template_directory() . '/vendors/meta_boxes.php';
+
+/**
  * Admin Panel
  */
-require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
-require get_template_directory() . '/vendors/admin_options.php';
+// require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
+if(class_exists('Redux')) {
+require get_template_directory() . '/inc/admin_options.php';
 
-/** Remove redux menu under the tools **/
+//Remove redux menu under the tools
 function remove_redux_menu() {
     remove_submenu_page('tools.php','redux-about');
 }
@@ -254,7 +265,7 @@ add_action( 'admin_menu', 'remove_redux_menu',12 );
 
 //Call admin option for function.php
 Redux::init( 'xlt_option' );
-
+}
 
 //Custom Hook
 function body_begin() {
@@ -268,3 +279,8 @@ if ($xlt_option['xl_enable_preloader']) {
 
 // Custom Style
 include get_template_directory() . '/inc/custom-style.php';
+
+/**
+ * Custom Functions
+ */
+require get_template_directory() . '/inc/custom-functions.php';

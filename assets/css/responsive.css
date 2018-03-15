@@ -119,12 +119,15 @@
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 767px) {
-
+@media only screen and (max-width : 768px) {
     .single-service {
         padding: 0 100px;
     }
-
+    .copyright-text.pull-left,
+    .site-info.pull-right {
+        float: none !important;
+        text-align: center;
+    }
 
 }
 

@@ -4,7 +4,7 @@ Theme URI: http://www.xltheme.com/product/bloga/
 Author: XL Theme
 Author URI: http://www.xltheme.com/
 Description: Bloga is a responsive personal blogging template.
-Version: 1.0.6
+Version: 1.1
 */
 
 
@@ -170,6 +170,9 @@ h6 {
 }
 .section-padding {
 	padding: 80px 0;
+}
+.section-padding.yes {
+	padding: 0;
 }
 .tm0 {
 	margin-top: 0px;
@@ -432,7 +435,7 @@ h6 {
 	overflow: hidden;
 	border: 2px solid #e3e3e3;
 	padding: 3px;
-	margin-bottom: 25px;
+	margin-bottom: 25px !important;
 }
 .entry-meta {
 	font-size: 0.875em;
@@ -486,6 +489,10 @@ h6 {
 }
 .blog-page .post-thumbnail audio {
 	width: 100%;
+}
+.blog-page .entry-content .read-more {
+	display: block;
+	margin-top: 20px;
 }
 .entry-format {
 	margin-right: 10px;
@@ -723,6 +730,9 @@ input.form-control {
 	font-weight: 900;
 	display: block;
 }
+#wp-calendar td#today a {
+    background: #ef6767;
+}
 #wp-calendar tbody td {
 	-webkit-transition: all .25s ease;
 	   -moz-transition: all .25s ease;
@@ -771,9 +781,9 @@ td#prev, td#next {
 * 7.0 Footer
 */
 .footer-area {
-	padding: 50px 0 30px;
+	padding: 10px 0 10px;
 	background: #ffffff;
-	min-height: 80px;
+	/* min-height: 80px; */
 }
 
 /**
@@ -805,3 +815,11 @@ td#prev, td#next {
 	z-index: 100000;
 }
 
+/**
+* Page Heading
+*/
+.page-heading {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}

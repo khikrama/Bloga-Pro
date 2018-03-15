@@ -9,6 +9,7 @@
  * @package Bloga
  */
 global $xlt_option;
+$show_title = get_post_meta(get_the_ID(), '_xl_show_title', true);
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -102,6 +103,6 @@ global $xlt_option;
 
 		<!-- Blog Section -->
 		<section id="blog-page" class="page blog-page">
-			<div class="section-padding">
-				<div class="container">
+			<div class="section-padding <?php echo $show_title; ?>">
+				
 

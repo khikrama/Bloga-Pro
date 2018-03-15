@@ -12,7 +12,7 @@
 
     <!-- Footer Widget Section -->
     <section class="footer-widget">
-        <div class="section-padding pbottom-0">
+        <div class="section-padding">
             <div class="container">
                 <div class="row">
                     <?php if (is_active_sidebar( 'footer-1' )) : ?>
