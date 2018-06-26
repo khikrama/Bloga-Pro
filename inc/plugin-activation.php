@@ -63,7 +63,9 @@ function bloga_register_required_plugins() {
 			'slug' => 'bloga-core', // The plugin slug (typically the folder name).
 			'source' => get_template_directory() . '/plugins/bloga-core.zip', // The plugin source.
 			'required' => true, // If false, the plugin is only 'recommended' instead of required.
-			'version' => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version' => '1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation' => true,
+			'force_deactivation' => true,
 		),
 		// Elementor Page Builder 
 		array(
@@ -76,12 +78,16 @@ function bloga_register_required_plugins() {
             'name'     => esc_html__('CMB2', 'bloga'),
             'slug'     => 'cmb2',
             'required' => true,
+            'force_activation' => true,
+			'force_deactivation' => true,
         ),
         // Redux Framework
         array(
             'name'     => esc_html__('Redux FrameWork', 'bloga'),
             'slug'     => 'redux-framework',
             'required' => true,
+            'force_activation' => true,
+			'force_deactivation' => true,
         ),
 		// Contact Form 7
         array(
