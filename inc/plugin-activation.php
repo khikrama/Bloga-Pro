@@ -89,6 +89,12 @@ function bloga_register_required_plugins() {
             'force_activation' => true,
 			'force_deactivation' => true,
         ),
+        // Smart Slider 3
+        array(
+            'name'     => esc_html__('Smart Slider 3', 'bloga'),
+            'slug'     => 'smart-slider-3',
+            'required' => false
+		),
 		// Contact Form 7
         array(
             'name'     => esc_html__('Contact Form 7', 'bloga'),
