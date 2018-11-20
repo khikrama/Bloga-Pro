@@ -57,21 +57,15 @@ function bloga_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-		// Bloga Pro Core
+		// XLTHEME Core
 		array(
-			'name' => esc_html__('Bloga Pro Core', 'bloga'), // The plugin name.
-			'slug' => 'bloga-core', // The plugin slug (typically the folder name).
-			'source' => get_template_directory() . '/plugins/bloga-core.zip', // The plugin source.
+			'name' => esc_html__('XLTHEME Core', 'bloga'), // The plugin name.
+			'slug' => 'xltheme-core', // The plugin slug (typically the folder name).
+			'source' => get_template_directory() . '/plugins/xltheme-core.zip', // The plugin source.
 			'required' => true, // If false, the plugin is only 'recommended' instead of required.
-			'version' => '1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			// 'version' => '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation' => true,
 			'force_deactivation' => true,
-		),
-		// Elementor Page Builder 
-		array(
-			'name' => esc_html__('Elementor Page Builder', 'bloga'),
-			'slug' => 'elementor',
-			'required' => true,
 		),
 		// CMB2 Metabox 
         array(
@@ -89,6 +83,12 @@ function bloga_register_required_plugins() {
             'force_activation' => true,
 			'force_deactivation' => true,
         ),
+        // Elementor Page Builder 
+		array(
+			'name' => esc_html__('Elementor Page Builder', 'bloga'),
+			'slug' => 'elementor',
+			'required' => true,
+		),
         // Smart Slider 3
         array(
             'name'     => esc_html__('Smart Slider 3', 'bloga'),
