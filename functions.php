@@ -255,16 +255,18 @@ require_once get_template_directory() . '/inc/plugin-activation.php';
  */
 // require get_template_directory() . '/vendors/redux/ReduxCore/framework.php';
 if(class_exists('Redux')) {
-require get_template_directory() . '/inc/admin_options.php';
 
-//Remove redux menu under the tools
-function remove_redux_menu() {
-    remove_submenu_page('tools.php','redux-about');
-}
-add_action( 'admin_menu', 'remove_redux_menu',12 );
+	require get_template_directory() . '/inc/admin_options.php';
 
-//Call admin option for function.php
-Redux::init( 'xlt_option' );
+	//Remove redux menu under the tools
+	function remove_redux_menu() {
+		remove_submenu_page('tools.php','redux-about');
+	}
+	add_action( 'admin_menu', 'remove_redux_menu',12 );
+
+	//Call admin option for function.php
+	Redux::init( 'xlt_option' );
+
 }
 
 //Custom Hook
