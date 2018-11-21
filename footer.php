@@ -44,9 +44,9 @@ endif;
 
             <?php if ($xlt_option['xl_xltheme_credit']) : ?>
 			<div class="site-info pull-right">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bloga' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bloga' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bloga-pro' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bloga-pro' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-                <a href="<?php echo esc_url( __( 'https://www.xltheme.com/', 'bloga' ) ); ?>"><?php printf( esc_html__( 'Design & developed by %s', 'bloga' ), 'XLTHEME' ); ?></a>
+                <a href="<?php echo esc_url( __( 'https://www.xltheme.com/', 'bloga-pro' ) ); ?>"><?php printf( esc_html__( 'Design & developed by %s', 'bloga-pro' ), 'XLTHEME' ); ?></a>
 			</div><!-- .site-info -->
             <?php endif; ?>
 		</div><!-- /.copyright -->

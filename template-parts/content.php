@@ -47,7 +47,7 @@ $xl_blog_style = $xlt_option['xl_blog_style'] ? $xlt_option['xl_blog_style'] : '
                 }
 
                 wp_link_pages( array(
-                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bloga' ),
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bloga-pro' ),
                     'after'  => '</div>',
                 ) );
             ?>

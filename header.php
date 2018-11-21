@@ -75,7 +75,7 @@ $show_title = get_post_meta(get_the_ID(), '_xl_show_title', true);
 <?php body_begin(); ?>
 
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloga' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloga-pro' ); ?></a>
 
     <?php
 

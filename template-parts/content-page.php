@@ -46,7 +46,7 @@ $custom_page_title = get_post_meta($post_id, '_xl_custom_page_title', true);
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages(array(
-					'before' => '<div class="page-links">' . esc_html__('Pages:', 'bloga'),
+					'before' => '<div class="page-links">' . esc_html__('Pages:', 'bloga-pro'),
 					'after' => '</div>',
 				));
 			?>
@@ -55,7 +55,7 @@ $custom_page_title = get_post_meta($post_id, '_xl_custom_page_title', true);
 
 	<footer class="entry-footer">
 		<div class="container">
-			<?php edit_post_link(esc_html__('Edit', 'bloga'), '<span class="edit-link">', '</span>'); ?>
+			<?php edit_post_link(esc_html__('Edit', 'bloga-pro'), '<span class="edit-link">', '</span>'); ?>
 		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

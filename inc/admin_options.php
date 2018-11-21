@@ -35,8 +35,8 @@ $args = array(
     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
     'allow_sub_menu'       => true,
     // Show the sections below the admin menu item or not
-    'menu_title'           => __( 'Theme Options', 'bloga' ),
-    'page_title'           => __( 'Theme Options', 'bloga' ),
+    'menu_title'           => __( 'Theme Options', 'bloga-pro' ),
+    'page_title'           => __( 'Theme Options', 'bloga-pro' ),
     // You will need to generate a Google API key to use this feature.
     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
     'google_api_key'       => '',
@@ -143,7 +143,7 @@ Redux::setArgs( $opt_name, $args );
 // -> START Basic Fields
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'General', 'bloga' ),
+    'title' => __( 'General', 'bloga-pro' ),
     'id'    => 'general_options',
     'icon'  => 'el el-adjust-alt',
     'subsection' => false,
@@ -151,8 +151,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_theme_style',
             'type'     => 'image_select',
-            'title'    => __( 'Default Theme Style', 'bloga' ),
-            'subtitle' => __( 'Select theme style from preset.', 'bloga' ),
+            'title'    => __( 'Default Theme Style', 'bloga-pro' ),
+            'subtitle' => __( 'Select theme style from preset.', 'bloga-pro' ),
             'options'  => array(
                 'default' => array(
                     'alt' => 'Default',
@@ -240,8 +240,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_blog_style',
             'type'     => 'select',
-            'title'    => __( 'Default Blog Style', 'bloga' ),
-            'subtitle' => __( 'Select blog style from the list.', 'bloga' ),
+            'title'    => __( 'Default Blog Style', 'bloga-pro' ),
+            'subtitle' => __( 'Select blog style from the list.', 'bloga-pro' ),
             'options'  => array(
                 'list' => 'List',
 //                'grid' => 'Grid',
@@ -251,7 +251,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_enable_preloader',
             'type'     => 'switch',
-            'title'    => __( 'Enable Preloader?', 'bloga' ),
+            'title'    => __( 'Enable Preloader?', 'bloga-pro' ),
             'default'  => 0,
             'on'       => 'ON',
             'off'      => 'OFF',
@@ -259,8 +259,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_preloader_style',
             'type'     => 'select',
-            'title'    => __( 'Preloader Style', 'bloga' ),
-            'subtitle' => __( 'Select preloader style from the list.', 'bloga' ),
+            'title'    => __( 'Preloader Style', 'bloga-pro' ),
+            'subtitle' => __( 'Select preloader style from the list.', 'bloga-pro' ),
             'required' => array( 'xl_enable_preloader', "=", 1 ),
             'options'  => array(
                 '1' => 'Style 1',
@@ -280,29 +280,29 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_preloader_bg_color',
             'type'     => 'color',
-            'title'    => __( 'Preloader Background Color', 'bloga' ),
+            'title'    => __( 'Preloader Background Color', 'bloga-pro' ),
             'required' => array( 'xl_enable_preloader', "=", 1 ),
         ),
         array(
             'id'       => 'xl_preloader_color',
             'type'     => 'color',
-            'title'    => __( 'Preloader Color', 'bloga' ),
+            'title'    => __( 'Preloader Color', 'bloga-pro' ),
             'required' => array( 'xl_enable_preloader', "=", 1 ),
         ),
     ),
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Logo & Favicon', 'bloga' ),
+    'title' => __( 'Logo & Favicon', 'bloga-pro' ),
     'id'    => 'xl_logo_favicon',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-leaf',
     'fields'     => array(
         array(
             'id'       => 'xl_logo_on_off',
             'type'     => 'switch',
-            'title'    => __( 'Logo Section', 'bloga' ),
-            'subtitle' => __( 'Upload your logo', 'bloga' ),
+            'title'    => __( 'Logo Section', 'bloga-pro' ),
+            'subtitle' => __( 'Upload your logo', 'bloga-pro' ),
             'default'  => 0,
             'on'       => 'ON',
             'off'      => 'OFF',
@@ -314,13 +314,13 @@ Redux::setSection( $opt_name, array(
             'indent'   => false,
             'required' => array( 'xl_logo_on_off', "=", 1 ),
             'compiler' => 'true',
-            'title'    => __( 'Upload Logo', 'bloga' ),
-            'subtitle'     => __( 'Select an image file for your logo.', 'bloga' ),
+            'title'    => __( 'Upload Logo', 'bloga-pro' ),
+            'subtitle'     => __( 'Select an image file for your logo.', 'bloga-pro' ),
         ),
         array(
             'id' => 'xl_favicon',
             'type' => 'media',
-            'title' => __('Favicon', 'bloga'),
+            'title' => __('Favicon', 'bloga-pro'),
             'default' => array("url" => get_template_directory_uri() . "/assets/images/favicon.png"),
             'preview' => true,
             "url" => true
@@ -329,16 +329,16 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Header', 'bloga' ),
+    'title' => __( 'Header', 'bloga-pro' ),
     'id'    => 'xl_header',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-website',
     'fields'     => array(
         array(
             'id'       => 'sticky_header',
             'type'     => 'switch',
-            'title'    => __( 'Sticky Header', 'bloga' ),
-            'subtitle' => __( 'If you want to keep your header always on top, Enable this option Yes', 'bloga' ),
+            'title'    => __( 'Sticky Header', 'bloga-pro' ),
+            'subtitle' => __( 'If you want to keep your header always on top, Enable this option Yes', 'bloga-pro' ),
             'default'  => 0,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -347,8 +347,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'header_style',
             'type'     => 'image_select',
-            'title'    => __( 'Header Style', 'bloga' ),
-            'subtitle' => __( 'Select a header variation from presets', 'bloga' ),
+            'title'    => __( 'Header Style', 'bloga-pro' ),
+            'subtitle' => __( 'Select a header variation from presets', 'bloga-pro' ),
             //Must provide key => value(array:title|img) pairs for radio options
             'options'  => array(
                 '1' => array(
@@ -367,16 +367,16 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Sidebars', 'bloga' ),
+    'title' => __( 'Sidebars', 'bloga-pro' ),
     'id'    => 'xl_sidebars',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-pause',
     'fields'     => array(
         array(
             'id'       => 'xl_enable_sidebar',
             'type'     => 'switch',
-            'title'    => __( 'Enable Sidebar', 'bloga' ),
-            'subtitle' => __('If you want to display sidebar widget, enable it.', 'bloga'),
+            'title'    => __( 'Enable Sidebar', 'bloga-pro' ),
+            'subtitle' => __('If you want to display sidebar widget, enable it.', 'bloga-pro'),
             'default'  => 1,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -384,8 +384,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'sidebar_position',
             'type'     => 'image_select',
-            'title'    => __('Sidebar Position', 'bloga'),
-            'subtitle' => __('Select sidebar position', 'bloga'),
+            'title'    => __('Sidebar Position', 'bloga-pro'),
+            'subtitle' => __('Select sidebar position', 'bloga-pro'),
             'required' => array('xl_enable_sidebar', '=', '1'),
             'options'  => array(
                 'sl'      => array(
@@ -404,16 +404,16 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Typography', 'bloga' ),
+    'title' => __( 'Typography', 'bloga-pro' ),
     'id'    => 'xl_typography',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-font',
     'fields'     => array(
         array(
             'id'       => 'xl_enable_typography',
             'type'     => 'switch',
-            'title'    => __( 'Custom Typography', 'bloga' ),
-            'subtitle' => __('Enable custom typography option?.', 'bloga'),
+            'title'    => __( 'Custom Typography', 'bloga-pro' ),
+            'subtitle' => __('Enable custom typography option?.', 'bloga-pro'),
             'default'  => 0,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -421,7 +421,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_body_fonts',
             'type' => 'typography',
-            'title' => __('Body Font', 'bloga'),
+            'title' => __('Body Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -447,7 +447,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h1_fonts',
             'type' => 'typography',
-            'title' => __('H1 Font', 'bloga'),
+            'title' => __('H1 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -473,7 +473,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h2_fonts',
             'type' => 'typography',
-            'title' => __('H2 Font', 'bloga'),
+            'title' => __('H2 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -499,7 +499,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h3_fonts',
             'type' => 'typography',
-            'title' => __('H3 Font', 'bloga'),
+            'title' => __('H3 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -525,7 +525,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h4_fonts',
             'type' => 'typography',
-            'title' => __('H4 Font', 'bloga'),
+            'title' => __('H4 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -551,7 +551,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h5_fonts',
             'type' => 'typography',
-            'title' => __('H5 Font', 'bloga'),
+            'title' => __('H5 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -577,7 +577,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'xl_h6_fonts',
             'type' => 'typography',
-            'title' => __('H6 Font', 'bloga'),
+            'title' => __('H6 Font', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -604,7 +604,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'header_top',
             'type' => 'typography',
-            'title' => __('Header Top', 'bloga'),
+            'title' => __('Header Top', 'bloga-pro'),
             'google'      => true,
             'color' => false,
             'word-spacing'=>true,
@@ -630,15 +630,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Blog', 'bloga' ),
+    'title' => __( 'Blog', 'bloga-pro' ),
     'id'    => 'blog_setting',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-edit',
     'fields'     => array(
         array(
             'id'       => 'xl_enable_limit_post',
             'type'     => 'switch',
-            'title'    => __( 'Enable Post Excerpt?', 'bloga' ),
+            'title'    => __( 'Enable Post Excerpt?', 'bloga-pro' ),
             'default'  => 0,
             'on'       => 'ON',
             'off'      => 'OFF',
@@ -646,8 +646,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_excerpt_length',
             'type'     => 'text',
-            'title'    => __( 'Excerpt Length', 'bloga' ),
-            'subtitle' => __( 'Enter the excerpt length. It is must be a numeric value.', 'bloga' ),
+            'title'    => __( 'Excerpt Length', 'bloga-pro' ),
+            'subtitle' => __( 'Enter the excerpt length. It is must be a numeric value.', 'bloga-pro' ),
             'validate' => 'numeric',
             'default'  => '25',
             'required' => array( 'xl_enable_limit_post', "=", 1 ),
@@ -655,8 +655,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_blog_read_more_text',
             'type'     => 'text',
-            'title'    => __( 'Read More Text', 'bloga' ),
-            'subtitle' => __( 'Enter the read more text.', 'bloga' ),
+            'title'    => __( 'Read More Text', 'bloga-pro' ),
+            'subtitle' => __( 'Enter the read more text.', 'bloga-pro' ),
             'default'  => 'Continue Reading',
             'required' => array( 'xl_enable_limit_post', "=", 1 ),
         ),
@@ -665,16 +665,16 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Custom Style', 'bloga' ),
+    'title' => __( 'Custom Style', 'bloga-pro' ),
     'id'    => 'xl_custom_style',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-adjust',
     'fields'     => array(
         array(
             'id'       => 'xl_enable_custom_style',
             'type'     => 'switch',
-            'title'    => __( 'Custom Style', 'bloga' ),
-            'subtitle' => __('Enable custom Style option?.', 'bloga'),
+            'title'    => __( 'Custom Style', 'bloga-pro' ),
+            'subtitle' => __('Enable custom Style option?.', 'bloga-pro'),
             'default'  => 0,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -682,8 +682,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'color-section-start',
             'type'     => 'section',
-            'title'    => __( 'Color Options', 'bloga' ),
-            'subtitle' => __( 'Change text color from the following section.', 'bloga' ),
+            'title'    => __( 'Color Options', 'bloga-pro' ),
+            'subtitle' => __( 'Change text color from the following section.', 'bloga-pro' ),
             'indent'   => true,
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -691,8 +691,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'default-color',
             'type'     => 'color',
             'output'   => array( 'a' ),
-            'title'    => __( 'Default Color', 'bloga' ),
-            'subtitle' => __( 'Pick default link color (default: #2b3747).', 'bloga' ),
+            'title'    => __( 'Default Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default link color (default: #2b3747).', 'bloga-pro' ),
             'default'  => '#2b3747',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -700,8 +700,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'default-hover-color',
             'type'     => 'color',
             'output'   => array( 'a:hover' ),
-            'title'    => __( 'Default Hover Color', 'bloga' ),
-            'subtitle' => __( 'Pick default link hover color (default: #ef6767).', 'bloga' ),
+            'title'    => __( 'Default Hover Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default link hover color (default: #ef6767).', 'bloga-pro' ),
             'default'  => '#ef6767',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -709,8 +709,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'menu-color',
             'type'     => 'color',
             'output'   => array( '.navbar-default .navbar-nav>li>a' ),
-            'title'    => __( 'Menu Color', 'bloga' ),
-            'subtitle' => __( 'Pick the menu color (default: #2b3747).', 'bloga' ),
+            'title'    => __( 'Menu Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick the menu color (default: #2b3747).', 'bloga-pro' ),
             'default'  => '#2b3747',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -718,8 +718,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'menu-hover-color',
             'type'     => 'color',
             'output'   => array( '.navbar-default .navbar-nav>li>a:hover', '.navbar-default .navbar-nav>li>a:focus' ),
-            'title'    => __( 'Menu Hover Color', 'bloga' ),
-            'subtitle' => __( 'Pick the menu hover color (default: #ef6767).', 'bloga' ),
+            'title'    => __( 'Menu Hover Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick the menu hover color (default: #ef6767).', 'bloga-pro' ),
             'default'  => '#ef6767',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -727,8 +727,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'menu-active-color',
             'type'     => 'color',
             'output'   => array( '.navbar-default .navbar-nav>li.current-menu-item a' ),
-            'title'    => __( 'Menu Active Color', 'bloga' ),
-            'subtitle' => __( 'Pick the menu active color (default: #ef6767).', 'bloga' ),
+            'title'    => __( 'Menu Active Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick the menu active color (default: #ef6767).', 'bloga-pro' ),
             'default'  => '#ef6767',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -736,8 +736,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'body-color',
             'type'     => 'color',
             'output'   => array( 'html','body' ),
-            'title'    => __( 'Body Color', 'bloga' ),
-            'subtitle' => __( 'Pick default body color (default: #5c6c82).', 'bloga' ),
+            'title'    => __( 'Body Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default body color (default: #5c6c82).', 'bloga-pro' ),
             'default'  => '#5c6c82',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -745,8 +745,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer-top-widget-color',
             'type'     => 'color',
             'output'   => array( '.footer-top-widget' ),
-            'title'    => __( 'Footer Top Widget Color', 'bloga' ),
-            'subtitle' => __( 'Pick default footer top widget color (default: #5c6c82).', 'bloga' ),
+            'title'    => __( 'Footer Top Widget Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default footer top widget color (default: #5c6c82).', 'bloga-pro' ),
             'default'  => '#5c6c82',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -754,8 +754,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer-widget-color',
             'type'     => 'color',
             'output'   => array( '.footer-widget' ),
-            'title'    => __( 'Footer Widget Color', 'bloga' ),
-            'subtitle' => __( 'Pick default footer widget color (default: #5c6c82).', 'bloga' ),
+            'title'    => __( 'Footer Widget Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default footer widget color (default: #5c6c82).', 'bloga-pro' ),
             'default'  => '#5c6c82',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -763,16 +763,16 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer-color',
             'type'     => 'color',
             'output'   => array( '.footer-area' ),
-            'title'    => __( 'Footer Color', 'bloga' ),
-            'subtitle' => __( 'Pick default footer color (default: #5c6c82).', 'bloga' ),
+            'title'    => __( 'Footer Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick default footer color (default: #5c6c82).', 'bloga-pro' ),
             'default'  => '#5c6c82',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
         array(
             'id'       => 'header-border-top-color',
             'type'     => 'color_rgba',
-            'title'    => __( 'Header Border Top Color', 'bloga' ),
-            'subtitle' => __( 'Pick the header border top color (default: rgba(221, 221, 221, 0.41)).', 'bloga' ),
+            'title'    => __( 'Header Border Top Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick the header border top color (default: rgba(221, 221, 221, 0.41)).', 'bloga-pro' ),
             'default'  => array(
                 'color' => '#ddd',
                 'alpha' => '.41',
@@ -783,8 +783,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'header-border-bottom-color',
             'type'     => 'color_rgba',
-            'title'    => __( 'Header Border Bottom Color', 'bloga' ),
-            'subtitle' => __( 'Pick the header border bottom color (default: rgba(221, 221, 221, 0.41)).', 'bloga' ),
+            'title'    => __( 'Header Border Bottom Color', 'bloga-pro' ),
+            'subtitle' => __( 'Pick the header border bottom color (default: rgba(221, 221, 221, 0.41)).', 'bloga-pro' ),
             'default'  => array(
                 'color' => '#ddd',
                 'alpha' => '.41',
@@ -796,8 +796,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'bg-section-start',
             'type'     => 'section',
-            'title'    => __( 'Background Options', 'bloga' ),
-            'subtitle' => __( 'Change background color, images from the following section.', 'bloga' ),
+            'title'    => __( 'Background Options', 'bloga-pro' ),
+            'subtitle' => __( 'Change background color, images from the following section.', 'bloga-pro' ),
             'indent'   => true,
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -805,8 +805,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'header_top_area_bg',
             'type'     => 'background',
             'output'   => array( '.header-top' ),
-            'title'    => __( 'Header Top Background', 'bloga' ),
-            'subtitle' => __( 'Pick a header top background color for the theme (default: #ffffff).', 'bloga' ),
+            'title'    => __( 'Header Top Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a header top background color for the theme (default: #ffffff).', 'bloga-pro' ),
             'default'  => '#ffffff',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -814,8 +814,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'header_area_bg',
             'type'     => 'background',
             'output'   => array( '.header-area' ),
-            'title'    => __( 'Header Background', 'bloga' ),
-            'subtitle' => __( 'Pick a header background color for the theme (default: #ffffff).', 'bloga' ),
+            'title'    => __( 'Header Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a header background color for the theme (default: #ffffff).', 'bloga-pro' ),
             'default'  => '#ffffff',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -823,8 +823,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'content_area_bg',
             'type'     => 'background',
             'output'   => array( '.site-content' ),
-            'title'    => __( 'Content Background', 'bloga' ),
-            'subtitle' => __( 'Pick a content background color for the theme (default: #ffffff).', 'bloga' ),
+            'title'    => __( 'Content Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a content background color for the theme (default: #ffffff).', 'bloga-pro' ),
             'default'  => '#ffffff',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -832,8 +832,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer_top_widget_area_bg',
             'type'     => 'background',
             'output'   => array( '.footer-top-widget' ),
-            'title'    => __( 'Footer Top Widget Background', 'bloga' ),
-            'subtitle' => __( 'Pick a footer top widget background color for the theme (default: #ffffff).', 'bloga' ),
+            'title'    => __( 'Footer Top Widget Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a footer top widget background color for the theme (default: #ffffff).', 'bloga-pro' ),
             'default'  => '#ffffff',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -841,8 +841,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer_widget_area_bg',
             'type'     => 'background',
             'output'   => array( '.footer-widget' ),
-            'title'    => __( 'Footer Widget Background', 'bloga' ),
-            'subtitle' => __( 'Pick a footer widget background color for the theme (default: #2b3747).', 'bloga' ),
+            'title'    => __( 'Footer Widget Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a footer widget background color for the theme (default: #2b3747).', 'bloga-pro' ),
             'default'  => '#2b3747',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -850,8 +850,8 @@ Redux::setSection( $opt_name, array(
             'id'       => 'footer_area_bg',
             'type'     => 'background',
             'output'   => array( '.footer-area' ),
-            'title'    => __( 'Footer Background', 'bloga' ),
-            'subtitle' => __( 'Pick a footer background color for the theme (default: #ffffff).', 'bloga' ),
+            'title'    => __( 'Footer Background', 'bloga-pro' ),
+            'subtitle' => __( 'Pick a footer background color for the theme (default: #ffffff).', 'bloga-pro' ),
             'default'  => '#ffffff',
             'required' => array('xl_enable_custom_style', '=', '1'),
         ),
@@ -859,97 +859,97 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Social Links', 'bloga' ),
+    'title' => __( 'Social Links', 'bloga-pro' ),
     'id'    => 'button-links',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
             'icon'  => 'el el-heart-empty',
     'subsection' => false,
     'fields'     => array(
         array(
             'id'       => 'xl_facebook',
             'type'     => 'text',
-            'title'    => __('Facebook', 'bloga'),
-            'subtitle' => __('Facebook button link', 'bloga'),
+            'title'    => __('Facebook', 'bloga-pro'),
+            'subtitle' => __('Facebook button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_twitter',
             'type'     => 'text',
-            'title'    => __('Twitter', 'bloga'),
-            'subtitle' => __('Twitter button link', 'bloga'),
+            'title'    => __('Twitter', 'bloga-pro'),
+            'subtitle' => __('Twitter button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_linkedin',
             'type'     => 'text',
-            'title'    => __('Linkedin', 'bloga'),
-            'subtitle' => __('Linkedin button link', 'bloga'),
+            'title'    => __('Linkedin', 'bloga-pro'),
+            'subtitle' => __('Linkedin button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_google_plus',
             'type'     => 'text',
-            'title'    => __('Google plus', 'bloga'),
-            'subtitle' => __('Google plus button link', 'bloga'),
+            'title'    => __('Google plus', 'bloga-pro'),
+            'subtitle' => __('Google plus button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_dribbble',
             'type'     => 'text',
-            'title'    => __('Dribbble', 'bloga'),
-            'subtitle' => __('Dribbble button link', 'bloga'),
+            'title'    => __('Dribbble', 'bloga-pro'),
+            'subtitle' => __('Dribbble button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_pinterest',
             'type'     => 'text',
-            'title'    => __('Pinterest', 'bloga'),
-            'subtitle' => __('Pinterest button link', 'bloga'),
+            'title'    => __('Pinterest', 'bloga-pro'),
+            'subtitle' => __('Pinterest button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_behance',
             'type'     => 'text',
-            'title'    => __('Behance', 'bloga'),
-            'subtitle' => __('Behance button link', 'bloga'),
+            'title'    => __('Behance', 'bloga-pro'),
+            'subtitle' => __('Behance button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_youtube',
             'type'     => 'text',
-            'title'    => __('YouTube', 'bloga'),
-            'subtitle' => __('YouTube button link', 'bloga'),
+            'title'    => __('YouTube', 'bloga-pro'),
+            'subtitle' => __('YouTube button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_instagram',
             'type'     => 'text',
-            'title'    => __('Instagram', 'bloga'),
-            'subtitle' => __('Instagram button link', 'bloga'),
+            'title'    => __('Instagram', 'bloga-pro'),
+            'subtitle' => __('Instagram button link', 'bloga-pro'),
             'validate' => 'url',
         ),
         array(
             'id'       => 'xl_flickr',
             'type'     => 'text',
-            'title'    => __('Flickr', 'bloga'),
-            'subtitle' => __('Flickr button link', 'bloga'),
+            'title'    => __('Flickr', 'bloga-pro'),
+            'subtitle' => __('Flickr button link', 'bloga-pro'),
             'validate' => 'url',
         ),
     ),
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Footer Settings', 'bloga' ),
+    'title' => __( 'Footer Settings', 'bloga-pro' ),
     'id'    => 'footer_options',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-magic',
     'fields'     => array(
 // Footer Top
         array(
             'id'       => 'xl_enable_footer_top',
             'type'     => 'switch',
-            'title'    => __( 'Enable Footer Top', 'bloga' ),
-            'subtitle' => __('If you want to display footer top widget, enable it.', 'bloga'),
+            'title'    => __( 'Enable Footer Top', 'bloga-pro' ),
+            'subtitle' => __('If you want to display footer top widget, enable it.', 'bloga-pro'),
             'default'  => 0,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -957,8 +957,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'footer_top',
             'type'     => 'image_select',
-            'title'    => __('Footer Top Column', 'bloga'),
-            'subtitle' => __('Select footer top widget column. Choose between 1 or 2 column layout.', 'bloga'),
+            'title'    => __('Footer Top Column', 'bloga-pro'),
+            'subtitle' => __('Select footer top widget column. Choose between 1 or 2 column layout.', 'bloga-pro'),
             'required' => array('xl_enable_footer_top', '=', '1'),
             'options'  => array(
                 '1c'      => array(
@@ -985,8 +985,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_enable_footer_widget',
             'type'     => 'switch',
-            'title'    => __( 'Enable Footer Widget', 'bloga' ),
-            'subtitle' => __('If you want to display footer widget, enable it.', 'bloga'),
+            'title'    => __( 'Enable Footer Widget', 'bloga-pro' ),
+            'subtitle' => __('If you want to display footer widget, enable it.', 'bloga-pro'),
             'default'  => 1,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -994,8 +994,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'footer_widget',
             'type'     => 'image_select',
-            'title'    => __('Footer Widget Column', 'bloga'),
-            'subtitle' => __('Select footer widget column. Choose between 1, 2, 3 or 4 column layout.', 'bloga'),
+            'title'    => __('Footer Widget Column', 'bloga-pro'),
+            'subtitle' => __('Select footer widget column. Choose between 1, 2, 3 or 4 column layout.', 'bloga-pro'),
             'required' => array('xl_enable_footer_widget', '=', '1'),
             'options'  => array(
                 '1c'      => array(
@@ -1042,7 +1042,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_xltheme_credit',
             'type'     => 'switch',
-            'title'    => __( 'XLTHEME Credit', 'bloga' ),
+            'title'    => __( 'XLTHEME Credit', 'bloga-pro' ),
             'default'  => 1,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -1050,7 +1050,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_show_copyright',
             'type'     => 'switch',
-            'title'    => __( 'Show Copyright', 'bloga' ),
+            'title'    => __( 'Show Copyright', 'bloga-pro' ),
             'default'  => 1,
             'on'       => 'Yes',
             'off'      => 'No',
@@ -1058,9 +1058,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'xl_copyright',
             'type'     => 'textarea',
-            'title'    => __('Copyright', 'bloga'),
-            'subtitle' => __('Add your copyright text', 'bloga'),
-            'default'  => __('Copyright &copy; 2017 <a href="https://www.xltheme.com/">XLTHEME</a>', 'bloga'),
+            'title'    => __('Copyright', 'bloga-pro'),
+            'subtitle' => __('Add your copyright text', 'bloga-pro'),
+            'default'  => __('Copyright &copy; 2017 <a href="https://www.xltheme.com/">XLTHEME</a>', 'bloga-pro'),
             'required' => array('xl_show_copyright', '=', '1')
         ),
 
@@ -1068,34 +1068,34 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title' => __( 'Custom Code', 'bloga' ),
+    'title' => __( 'Custom Code', 'bloga-pro' ),
     'id'    => 'custom_code',
-    'desc'  => __( '', 'bloga' ),
+    'desc'  => __( '', 'bloga-pro' ),
     'icon'  => 'el el-file-edit',
     'fields'     => array(
         array(
             'id'       => 'xl_tracking_code',
             'type'     => 'textarea',
-            'title'    => __( 'Tracking Code', 'bloga' ),
-            'subtitle'     => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please place code inside script tags.', 'bloga' ),
+            'title'    => __( 'Tracking Code', 'bloga-pro' ),
+            'subtitle'     => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please place code inside script tags.', 'bloga-pro' ),
         ),
         array(
             'id'       => 'xl_space_before_head',
             'type'     => 'textarea',
-            'title'    => __( 'Space before < /head>', 'bloga' ),
-            'subtitle'     => __( 'Add code before the < /head> tag.', 'bloga' ),
+            'title'    => __( 'Space before < /head>', 'bloga-pro' ),
+            'subtitle'     => __( 'Add code before the < /head> tag.', 'bloga-pro' ),
         ),
         array(
             'id'       => 'xl_space_before_body',
             'type'     => 'textarea',
-            'title'    => __( 'Space before < /body>', 'bloga' ),
-            'subtitle'     => __( 'Add code before the < /body> tag.', 'bloga' ),
+            'title'    => __( 'Space before < /body>', 'bloga-pro' ),
+            'subtitle'     => __( 'Add code before the < /body> tag.', 'bloga-pro' ),
         ),
         array(
             'id'       => 'custom_css',
             'type'     => 'ace_editor',
-            'title'    => __('Custom CSS', 'bloga'),
-            'subtitle' => __('Paste your CSS code here.', 'bloga'),
+            'title'    => __('Custom CSS', 'bloga-pro'),
+            'subtitle' => __('Paste your CSS code here.', 'bloga-pro'),
             'mode'     => 'css',
             'theme'    => 'monokai',
         ),
@@ -1103,8 +1103,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'custom_js',
             'type'     => 'ace_editor',
-            'title'    => __('Custom JS', 'bloga'),
-            'subtitle' => __('Paste your JS code here.', 'bloga'),
+            'title'    => __('Custom JS', 'bloga-pro'),
+            'subtitle' => __('Paste your JS code here.', 'bloga-pro'),
             'mode'     => 'javascript',
             'theme'    => 'monokai',
         ),

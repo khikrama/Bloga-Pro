@@ -20,9 +20,9 @@ function bloga_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Bloga, use a find and replace
-	 * to change 'bloga' to the name of your theme in all the template files.
+	 * to change 'bloga-pro' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'bloga', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'bloga-pro', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -47,7 +47,7 @@ function bloga_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'bloga' ),
+		'primary' => esc_html__( 'Primary Menu', 'bloga-pro' ),
 	) );
 
 	/*
@@ -125,7 +125,7 @@ add_filter( 'excerpt_more', 'xl_excerpt_more' );
  */
 function bloga_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar 1', 'bloga' ),
+		'name'          => esc_html__( 'Sidebar 1', 'bloga-pro' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -135,7 +135,7 @@ function bloga_widgets_init() {
 	) );
 
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer Top 1', 'bloga' ),
+        'name'          => esc_html__( 'Footer Top 1', 'bloga-pro' ),
         'id'            => 'footer-top-1',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -144,7 +144,7 @@ function bloga_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer Top 2', 'bloga' ),
+        'name'          => esc_html__( 'Footer Top 2', 'bloga-pro' ),
         'id'            => 'footer-top-2',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -154,7 +154,7 @@ function bloga_widgets_init() {
     ) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 1', 'bloga' ),
+		'name'          => esc_html__( 'Footer 1', 'bloga-pro' ),
 		'id'            => 'footer-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -163,7 +163,7 @@ function bloga_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 2', 'bloga' ),
+        'name'          => esc_html__( 'Footer 2', 'bloga-pro' ),
         'id'            => 'footer-2',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -172,7 +172,7 @@ function bloga_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 3', 'bloga' ),
+        'name'          => esc_html__( 'Footer 3', 'bloga-pro' ),
         'id'            => 'footer-3',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -181,7 +181,7 @@ function bloga_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 4', 'bloga' ),
+        'name'          => esc_html__( 'Footer 4', 'bloga-pro' ),
         'id'            => 'footer-4',
         'description'   => '',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -226,9 +226,9 @@ add_action( 'wp_enqueue_scripts', 'bloga_scripts' );
 function bloga_default_menu(){
 	echo '<ul class="nav navbar-nav navbar-right sm sm-blue main-menu">';
 	if (is_user_logged_in()) {
-		echo '<li><a href="'.home_url().'/wp-admin/nav-menus.php">'.esc_html__( 'Create a Menu', 'bloga' ).'</a></li>';
+		echo '<li><a href="'.home_url().'/wp-admin/nav-menus.php">'.esc_html__( 'Create a Menu', 'bloga-pro' ).'</a></li>';
 	} else {
-		echo '<li><a href="'.home_url().'">'.esc_html__( 'Home', 'bloga' ).'</a></li>';
+		echo '<li><a href="'.home_url().'">'.esc_html__( 'Home', 'bloga-pro' ).'</a></li>';
 	}
 	echo '</ul>';
 }

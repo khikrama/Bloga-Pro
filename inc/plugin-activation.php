@@ -59,7 +59,7 @@ function bloga_register_required_plugins() {
 	$plugins = array(
 		// XLTHEME Core
 		array(
-			'name' => esc_html__('XLTHEME Core', 'bloga'), // The plugin name.
+			'name' => esc_html__('XLTHEME Core', 'bloga-pro'), // The plugin name.
 			'slug' => 'xltheme-core', // The plugin slug (typically the folder name).
 			'source' => get_template_directory() . '/plugins/xltheme-core.zip', // The plugin source.
 			'required' => true, // If false, the plugin is only 'recommended' instead of required.
@@ -69,7 +69,7 @@ function bloga_register_required_plugins() {
 		),
 		// CMB2 Metabox 
         array(
-            'name'     => esc_html__('CMB2', 'bloga'),
+            'name'     => esc_html__('CMB2', 'bloga-pro'),
             'slug'     => 'cmb2',
             'required' => true,
             'force_activation' => true,
@@ -77,7 +77,7 @@ function bloga_register_required_plugins() {
         ),
         // Redux Framework
         array(
-            'name'     => esc_html__('Redux FrameWork', 'bloga'),
+            'name'     => esc_html__('Redux FrameWork', 'bloga-pro'),
             'slug'     => 'redux-framework',
             'required' => true,
             'force_activation' => true,
@@ -85,25 +85,25 @@ function bloga_register_required_plugins() {
         ),
         // Elementor Page Builder 
 		array(
-			'name' => esc_html__('Elementor Page Builder', 'bloga'),
+			'name' => esc_html__('Elementor Page Builder', 'bloga-pro'),
 			'slug' => 'elementor',
 			'required' => true,
 		),
         // Smart Slider 3
         array(
-            'name'     => esc_html__('Smart Slider 3', 'bloga'),
+            'name'     => esc_html__('Smart Slider 3', 'bloga-pro'),
             'slug'     => 'smart-slider-3',
             'required' => false
 		),
 		// Contact Form 7
         array(
-            'name'     => esc_html__('Contact Form 7', 'bloga'),
+            'name'     => esc_html__('Contact Form 7', 'bloga-pro'),
             'slug'     => 'contact-form-7',
             'required' => false
 		),
 		// MailChimp for WordPress
         array(
-            'name'     => esc_html__('MailChimp for WordPress', 'bloga'),
+            'name'     => esc_html__('MailChimp for WordPress', 'bloga-pro'),
             'slug'     => 'mailchimp-for-wp',
             'required' => false
         ),
@@ -120,7 +120,7 @@ function bloga_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'bloga',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'bloga-pro',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'parent_slug'  => 'themes.php',            // Parent menu slug.
@@ -133,76 +133,76 @@ function bloga_register_required_plugins() {
 
 
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'bloga' ),
-			'menu_title'                      => __( 'Install Plugins', 'bloga' ),
+			'page_title'                      => __( 'Install Required Plugins', 'bloga-pro' ),
+			'menu_title'                      => __( 'Install Plugins', 'bloga-pro' ),
 
-			'installing'                      => __( 'Installing Plugin: %s', 'bloga' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'bloga-pro' ),
 
-			'updating'                        => __( 'Updating Plugin: %s', 'bloga' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'bloga' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'bloga-pro' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'bloga-pro' ),
 			'notice_can_install_required'     => _n_noop(
 
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'notice_can_install_recommended'  => _n_noop(
 
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'notice_ask_to_update'            => _n_noop(
 
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
 
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'notice_can_activate_required'    => _n_noop(
 
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'notice_can_activate_recommended' => _n_noop(
 
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
-				'bloga'
+				'bloga-pro'
 			),
 			'install_link'                    => _n_noop(
 				'Begin installing plugin',
 				'Begin installing plugins',
-				'bloga'
+				'bloga-pro'
 			),
 			'update_link' 					  => _n_noop(
 				'Begin updating plugin',
 				'Begin updating plugins',
-				'bloga'
+				'bloga-pro'
 			),
 			'activate_link'                   => _n_noop(
 				'Begin activating plugin',
 				'Begin activating plugins',
-				'bloga'
+				'bloga-pro'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'bloga' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'bloga' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'bloga' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'bloga-pro' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'bloga-pro' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'bloga-pro' ),
 
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'bloga' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'bloga-pro' ),
 
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'bloga' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'bloga-pro' ),
 
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'bloga' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'bloga' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'bloga' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'bloga' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'bloga-pro' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'bloga-pro' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'bloga-pro' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'bloga-pro' ),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),

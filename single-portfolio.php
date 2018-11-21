@@ -66,7 +66,7 @@ get_header();
                         ?>
                         <div class="row related-project">
                             <h3 class="related-title">
-                                <?php esc_html_e('Related Projects', 'switch_pro');?>
+                                <?php esc_html_e('Related Projects', 'bloga-pro');?>
                             </h3>
                             <?php
 

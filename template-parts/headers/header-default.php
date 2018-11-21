@@ -10,7 +10,7 @@
                     <div class="navbar-header">
 
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
-                            <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'bloga' ); ?></span>
+                            <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'bloga-pro' ); ?></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>

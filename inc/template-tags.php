@@ -16,7 +16,7 @@ function bloga_posted_on() {
 	$format = get_post_format();
 	if ( current_theme_supports( 'post-formats', $format ) ) {
 		printf( '<span class="entry-format">%1$s<a href="%2$s"> %3$s</a></span>',
-			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'bloga' ) ),
+			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'bloga-pro' ) ),
 			esc_url( get_post_format_link( $format ) ),
 			get_post_format_string( $format )
 		);
@@ -35,12 +35,12 @@ function bloga_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'bloga' ),
+		esc_html_x( 'Posted on %s', 'post date', 'bloga-pro' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'bloga' ),
+		esc_html_x( 'by %s', 'post author', 'bloga-pro' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -57,25 +57,25 @@ function bloga_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'bloga' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'bloga-pro' ) );
 		if ( $categories_list && bloga_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bloga' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bloga-pro' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bloga' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bloga-pro' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bloga' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bloga-pro' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'bloga' ), esc_html__( '1 Comment', 'bloga' ), esc_html__( '% Comments', 'bloga' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'bloga-pro' ), esc_html__( '1 Comment', 'bloga-pro' ), esc_html__( '% Comments', 'bloga-pro' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'bloga' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'bloga-pro' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
