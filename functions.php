@@ -276,8 +276,13 @@ function body_begin() {
 
 // Preloader
 if ($xlt_option['xl_enable_preloader']) {
-    include get_template_directory() . '/inc/preloader.php';
+    require get_template_directory() . '/inc/preloader.php';
 }
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 // Custom Style
 include get_template_directory() . '/inc/custom-style.php';
